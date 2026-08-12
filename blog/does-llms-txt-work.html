@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does llms.txt Actually Do Anything for AI Search Visibility? | AnswerFoundry</title>
+<meta name="description" content="Google says it ignores llms.txt, and a 137K-site study found 97% are never read. Here's what the evidence actually shows — and who it still matters for.">
+<meta property="og:title" content="Does llms.txt Actually Do Anything for AI Search Visibility?">
+<meta property="og:description" content="Google ignores llms.txt and 97% are never fetched. What the evidence shows, and the one case where it still matters.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/does-llms-txt-work.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Does llms.txt Actually Do Anything for AI Search Visibility?">
+<meta name="twitter:description" content="Google ignores llms.txt and 97% are never fetched. What the evidence shows, and the one case where it still matters.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/does-llms-txt-work.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "Article",
+"headline": "Does llms.txt actually do anything for AI search visibility?",
+"description": "Google says it ignores llms.txt, and a 137K-site study found 97% are never read. Here's what the evidence actually shows — and who it still matters for.",
+"datePublished": "2026-08-10",
+"dateModified": "2026-08-11",
+"author": {
+"@type": "Person",
+"name": "Kenny Chantasi",
+"jobTitle": "DO"
+},
+"publisher": {
+"@type": "Organization",
+"name": "AnswerFoundry LLC",
+"url": "https://answerfoundry.ai/"
+},
+"mainEntityOfPage": "https://answerfoundry.ai/blog/does-llms-txt-work.html"
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "BreadcrumbList",
+"itemListElement": [
+{
+"@type": "ListItem",
+"position": 1,
+"name": "Home",
+"item": "https://answerfoundry.ai/"
+},
+{
+"@type": "ListItem",
+"position": 2,
+"name": "Blog",
+"item": "https://answerfoundry.ai/blog/"
+},
+{
+"@type": "ListItem",
+"position": 3,
+"name": "Does llms.txt work?",
+"item": "https://answerfoundry.ai/blog/does-llms-txt-work.html"
+}
+]
+}
+</script>
+<script type="application/ld+json">
+{
+"@context": "https://schema.org",
+"@type": "FAQPage",
+"mainEntity": [
+{
+"@type": "Question",
+"name": "Will adding llms.txt help me show up in ChatGPT?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "There is no evidence that it will. AI retrieval bots — the crawlers behind live AI answers — accounted for roughly 1% of requests to these files in the largest study available, and no AI system goes looking for a file you haven't published. If showing up in ChatGPT is the goal, your effort is better spent elsewhere."
+}
+},
+{
+"@type": "Question",
+"name": "Does Google use llms.txt at all?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "No. Google Search Central states directly that Google Search doesn't use these files and ignores them. Google may crawl the file as it crawls any URL it discovers, but that isn't special treatment. Confusingly, Chrome's Lighthouse does audit for it — that's aimed at AI agents browsing your site, not at Google Search rankings."
+}
+},
+{
+"@type": "Question",
+"name": "Could having an llms.txt file hurt me?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "Not in Google Search — Google says it neither helps nor harms. The genuine risk is security: agents are designed to trust this file, so a stale or tampered-with version misleads anything that reads it. If you keep one, control who can edit it and review anything your platform generates on your behalf."
+}
+},
+{
+"@type": "Question",
+"name": "Is it worth creating one anyway, just in case?",
+"acceptedAnswer": {
+"@type": "Answer",
+"text": "If it's free and automatic, sure — the cost is near zero and it may matter more later if agents end up mediating AI search. What we'd push back on is paying for one, or treating it as a meaningful part of an AI visibility strategy. Publishing alone isn't enough regardless: agents fetch these files when something points them there, not speculatively."
+}
+}
+]
+}
+</script>
+<style>
+:root{
+--ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+--paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+--ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+.refs p{font-size:.92rem;line-height:1.6;margin-bottom:12px;padding-left:28px;text-indent:-28px;word-break:break-word}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script>
+
+</head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+<nav>
+<div class="nav-in">
+<a class="logo" href="/">Answer<span>Foundry</span></a>
+<div class="nav-links">
+<a href="/#why">Why AI visibility</a>
+<a href="/pricing/">Pricing</a>
+<a href="/blog/">Blog</a>
+<a href="/sample-audit/">Sample Audit</a>
+<a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+</div>
+</div>
+</nav>
+
+<article class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Does llms.txt work?</p>
+<p class="post-date">Published August 10, 2026</p>
+<h1>Does llms.txt actually do anything for AI search visibility?</h1>
+
+<p class="lede">Short answer: almost certainly not for AI search, and Google has said so directly. The one place it shows real signs of life is with AI coding agents. If a tool generates the file for you for free, keeping it is harmless — but building a strategy around it is not supported by the evidence.</p>
+
+<div class="prose">
+<h2>What this means</h2>
+<p>An llms.txt file is a plain Markdown file at the root of your site — <code>yoursite.com/llms.txt</code> — that summarizes what your business does and links to your most important pages. It was proposed by Jeremy Howard of Answer.AI in September 2024, on the reasoning that language models have limited context windows and that stripping a cluttered HTML page down to clean text is slow and lossy (Howard, 2024). The idea was to hand a model a tidy index instead.</p>
+<p>Worth being precise about one thing, because it causes real confusion: despite the name, llms.txt is nothing like robots.txt. It blocks nothing, permits nothing, and controls nothing. It is a suggestion that a machine is free to ignore, and for the most part, machines do ignore it.</p>
+
+<h2>Who this applies to</h2>
+<p>If you run a local service business — a clinic, a law firm, a contractor, a restaurant — and someone has told you that you need an llms.txt file to show up in ChatGPT, this article is for you. It also applies if your website platform quietly started generating one and you are wondering whether it is doing anything. The answer differs depending on who your customers are, and that distinction turns out to matter more than anything else here.</p>
+
+<h2>How we'd evaluate whether llms.txt is worth your time</h2>
+<p>We start with your server logs, because that is the only place the truth lives. The question is not whether your file is well-written — it is whether anything ever requested it. Most owners have never checked, and the answer is usually "nothing did." From there we ask how your buyers actually shop: someone choosing a dentist behaves nothing like a developer picking a software library, and only one of those paths currently runs through llms.txt.</p>
+
+<h2>Available options</h2>
+<ul>
+<li><strong>Do nothing.</strong> Perfectly defensible. Google has stated it ignores the file entirely, so skipping it costs you nothing in Google Search.</li>
+<li><strong>Let your platform generate it.</strong> Wix and similar builders increasingly create these automatically. Near-zero effort, near-zero expected return, but it costs you nothing either.</li>
+<li><strong>Write and maintain one deliberately.</strong> Only worth it if AI coding agents or other agentic tools are plausibly part of how customers find you — and even then, link to it so agents can discover it.</li>
+<li><strong>Pay someone to build one as an "AI visibility" service.</strong> We would not recommend this, and we do not sell it. The evidence does not support the price tag.</li>
+</ul>
+
+<h2>Benefits, limitations, and tradeoffs</h2>
+<p>The honest benefit is cheapness and a bet on the future: if the web becomes genuinely agentic, a file agents already know how to read could matter later. The limitation is that today, the base rate of readership is close to zero. There is also a real downside that rarely gets mentioned — an llms.txt file is content that agents are built to trust, which makes it an attractive target. If it goes stale or someone edits it without your knowledge, it misleads every agent that reads it. Treat it like code, not like marketing copy: version it, restrict who can change it, and keep it to plain links and descriptions rather than anything instruction-shaped.</p>
+
+<h2>What we know about how this actually plays out</h2>
+<p>This is a rare case where the evidence is unusually direct. Google's own Search Central documentation addresses it in a section titled "Mythbusting generative AI search: what you don't need to do." Google states that you don't need to create machine-readable files, AI text files, or Markdown to appear in Google Search including its generative AI features, "as Google Search itself doesn't use them," and adds that maintaining such a file "will neither harm nor help your site's visibility or rankings in Google Search, as Google Search ignores them" (Google Search Central, 2026).</p>
+<p>The largest independent measurement backs this up. Ahrefs analyzed server logs across 137,210 domains and found that 28% published an llms.txt file, but 97% of those files received zero requests in May 2026 — nothing fetched them at all, not bots, not humans. Of the small fraction that were fetched, named AI bots accounted for 19.5% of requests, and AI retrieval bots specifically — the ones powering AI search answers — made up just 1.1%. The study also found that AI bots never requested llms.txt files that didn't exist, meaning publishing one does not put you on any AI system's radar (Linehan &amp; Guan, 2026).</p>
+<p>Two caveats the researchers themselves raise, which we think are important. A fetch is not a read: a bot requesting the file proves nothing about whether it acted on the contents, so every number in that study is a ceiling rather than a floor. And the sample skews technical, so 28% adoption should be read as an upper bound.</p>
+<p>Google is not entirely of one mind here, which is worth knowing. The Chrome team shipped an llms.txt check inside Lighthouse's experimental agentic browsing audits, with documentation noting that without the file, "agents may spend more time crawling the site to understand its high-level structure and primary content" (Chrome for Developers, 2026). That is a different team optimizing for a different future — agents acting on your site, not AI search citing it. The Ahrefs data points the same direction: the heaviest identifiable AI readers were coding and agentic tools, with Anthropic's Claude Code out-fetching every AI retrieval bot, assistant, and training crawler.</p>
+
+<h2>Next steps</h2>
+<p>Check your logs for requests to /llms.txt before spending another minute on it. If your platform already generates one, leave it and move on. If you are being sold an llms.txt file as the path to showing up in ChatGPT, ask the seller for their evidence — then weigh it against Google's own documentation. The things that actually move AI visibility are less exciting and better supported: content that says something only you can say, a clean crawlable site, accurate business details, and a real presence in the third-party sources these systems read.</p>
+
+<h2>Orlando considerations</h2>
+<p>For most Orlando businesses we talk to — medical practices, home services, hospitality, professional services — customers are not reaching you through coding agents, so llms.txt is close to irrelevant to how you get found. Your leverage is elsewhere: an accurate Google Business Profile, consistent details across directories, and genuine reviews. Those feed the local signals AI tools lean on when someone asks which business in Orlando to call.</p>
+
+<h2>Frequently asked questions</h2>
+
+<details>
+<summary>Will adding llms.txt help me show up in ChatGPT?</summary>
+<p>There is no evidence that it will. AI retrieval bots — the crawlers behind live AI answers — accounted for roughly 1% of requests to these files in the largest study available, and no AI system goes looking for a file you haven't published. If showing up in ChatGPT is the goal, your effort is better spent elsewhere.</p>
+</details>
+<details>
+<summary>Does Google use llms.txt at all?</summary>
+<p>No. Google Search Central states directly that Google Search doesn't use these files and ignores them. Google may crawl the file as it crawls any URL it discovers, but that isn't special treatment. Confusingly, Chrome's Lighthouse does audit for it — that's aimed at AI agents browsing your site, not at Google Search rankings.</p>
+</details>
+<details>
+<summary>Could having an llms.txt file hurt me?</summary>
+<p>Not in Google Search — Google says it neither helps nor harms. The genuine risk is security: agents are designed to trust this file, so a stale or tampered-with version misleads anything that reads it. If you keep one, control who can edit it and review anything your platform generates on your behalf.</p>
+</details>
+<details>
+<summary>Is it worth creating one anyway, just in case?</summary>
+<p>If it's free and automatic, sure — the cost is near zero and it may matter more later if agents end up mediating AI search. What we'd push back on is paying for one, or treating it as a meaningful part of an AI visibility strategy. Publishing alone isn't enough regardless: agents fetch these files when something points them there, not speculatively.</p>
+</details>
+
+<h2>References</h2>
+<div class="refs">
+<p>Chrome for Developers. (2026, May 5). <em>llms.txt</em>. Lighthouse — Agentic browsing audits. https://developer.chrome.com/docs/lighthouse/agentic-browsing/llms-txt</p>
+<p>Google Search Central. (2026, July 10). <em>Optimizing your website for generative AI features on Google Search</em>. Google for Developers. https://developers.google.com/search/docs/fundamentals/ai-optimization-guide</p>
+<p>Howard, J. (2024, September 3). <em>The /llms.txt file</em>. llms-txt. https://llmstxt.org/</p>
+<p>Linehan, L., &amp; Guan, X. (2026, June 15). <em>We analyzed 137K sites: 97% of llms.txt files never get read</em>. Ahrefs. https://ahrefs.com/blog/llmstxt-study/</p>
+</div>
+
+<div class="disclaimer">
+This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. ChatGPT, Perplexity, Google AI, Claude, and similar tools are operated by third parties outside AnswerFoundry's control, and their behavior changes without notice. Results vary by business, market, and competition.
+</div>
+
+<p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+<p class="reviewed">Last updated: August 10, 2026</p>
+</div>
+</article>
+
+<section id="main" class="final">
+<div class="wrap">
+<h2>Find out what AI says about your business.</h2>
+<p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+<a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+</div>
+</section>
+
+<footer>
+<div class="wrap foot">
+<div>
+<strong style="color:#fff">AnswerFoundry LLC</strong><br>
+2445 S Hiawassee Rd, PMB 1021<br>
+Orlando, FL 32835<br>
+<a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+</div>
+<div style="text-align:right">
+&copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+<a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+<span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+</div>
+</div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>

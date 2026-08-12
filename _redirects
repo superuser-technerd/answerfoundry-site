@@ -1,0 +1,45 @@
+# AnswerFoundry LLC — legal URL aliases. Added 2026-08-08.
+# Catches links from email signatures, carrier/A2P registrations, and anyone
+# guessing a conventional path. First match wins.
+
+/privacy-policy        /privacy/        301!
+/privacypolicy         /privacy/        301!
+/tos                   /terms/          301!
+/terms-of-service      /terms/          301!
+/terms-and-conditions  /terms/          301!
+/terms-of-use          /terms/          301!
+/cookies               /cookie-policy/  301!
+/cookie                /cookie-policy/  301!
+/accessibility-statement  /accessibility/  301!
+/a11y                  /accessibility/  301!
+/disclaimer            /ai-disclaimer/  301!
+/ai-visibility-disclaimer  /ai-disclaimer/  301!
+/sms                   /sms-terms/      301!
+/text-terms            /sms-terms/      301!
+/messaging-terms       /sms-terms/      301!
+/contact-us            /contact/        301!
+/get-in-touch          /contact/        301!
+/legal-notice          /legal/          301!
+/policies              /legal/          301!
+
+# --- functions (added 2026-08-08) --------------------------------------
+# Netlify Functions v2 declare their own paths; these keep /api/* working even
+# if a prebuilt deploy doesn't pick the declarations up.
+/api/verify-purchase   /.netlify/functions/verify-purchase   200
+/api/submit-intake     /.netlify/functions/submit-intake     200
+/api/unlock-sample     /.netlify/functions/unlock-sample     200
+/api/snapshot-data     /.netlify/functions/snapshot-data     200
+/api/snapshot-create   /.netlify/functions/snapshot-create   200
+/api/deliver-report    /.netlify/functions/deliver-report    200
+/api/run-audit         /.netlify/functions/run-audit         200
+/api/admin-jobs        /.netlify/functions/admin-jobs        200
+/api/snapshot-approve  /.netlify/functions/snapshot-approve  200
+# exact /r/ only; /r/<token>/ stays static for hand-built reports
+/r/                    /.netlify/functions/get-report        200
+
+# --- repair already-sent full-sample links (added 2026-08-09) -----------
+# Emails went out pointing at /s/full-sample/ before FULL_SAMPLE_PATH was set.
+# Rewrite (200, not 301) so the URL the recipient clicked keeps working and the
+# real path stays out of their address bar.
+/s/full-sample/*   /s/4cc5a873bbeedb7999eb5a06/:splat   200
+/s/full-sample     /s/4cc5a873bbeedb7999eb5a06/         200

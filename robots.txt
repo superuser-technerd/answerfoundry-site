@@ -1,0 +1,126 @@
+# robots.txt for answerfoundry.ai
+# Updated 2026-08-07
+#
+# Policy: this site WANTS to be crawled, indexed, cited, and quoted by both
+# traditional search engines and AI answer engines. Everything is allowed by
+# default. The named blocks below are explicit rather than necessary, so that
+# each crawler's access is documented and easy to change one line at a time.
+#
+# Each AI company splits its traffic across separate user-agents that must be
+# controlled independently -- blocking a training crawler does NOT block that
+# company's search crawler, and vice versa.
+
+User-agent: *
+Allow: /
+
+# --- Traditional search -------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+# --- Google AI surfaces -------------------------------------------------
+# Google-Extended governs whether content may be used for grounding Gemini
+# and Vertex AI generative answers. It does not affect Search ranking.
+User-agent: Google-Extended
+Allow: /
+
+# GoogleOther is used for non-Search product crawls and research.
+User-agent: GoogleOther
+Allow: /
+
+# Apple Intelligence / Siri summarisation.
+User-agent: Applebot-Extended
+Allow: /
+
+# --- OpenAI / ChatGPT ---------------------------------------------------
+# OAI-SearchBot indexes pages for ChatGPT search results. Disallowing it
+# removes the site from ChatGPT search answers, so it stays allowed.
+User-agent: OAI-SearchBot
+Allow: /
+
+# ChatGPT-User fetches a page when a ChatGPT user's question requires it.
+User-agent: ChatGPT-User
+Allow: /
+
+# GPTBot collects content that may be used to train foundation models.
+# Change to "Disallow: /" to opt out of training while keeping search.
+User-agent: GPTBot
+Allow: /
+
+# --- Perplexity ---------------------------------------------------------
+# PerplexityBot surfaces and links pages in Perplexity results.
+User-agent: PerplexityBot
+Allow: /
+
+# Perplexity-User fetches a page in response to a specific user question.
+User-agent: Perplexity-User
+Allow: /
+
+# --- Anthropic / Claude -------------------------------------------------
+# Claude-SearchBot indexes content for Claude's search results.
+User-agent: Claude-SearchBot
+Allow: /
+
+# Claude-User retrieves content to answer a Claude user's question.
+User-agent: Claude-User
+Allow: /
+
+# ClaudeBot collects training data. Change to "Disallow: /" to opt out.
+User-agent: ClaudeBot
+Allow: /
+
+# --- Other AI answer engines and assistants -----------------------------
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: Bytespider
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# --- SEO / AI-visibility auditing tools ---------------------------------
+# Left open deliberately: third-party monitoring of this site's own AI
+# visibility is part of how the business measures its own work.
+User-agent: AhrefsBot
+Allow: /
+
+User-agent: SemrushBot
+Allow: /
+
+# --- Notes --------------------------------------------------------------
+# /answer-snapshot/thank-you/ is intentionally NOT disallowed here. It carries
+# a robots noindex meta tag, and a crawler must be able to fetch the page to
+# see that tag. Blocking it in robots.txt would hide the noindex directive.
+
+# --- Private deliverables ------------------------------------------------
+# Client reports, individual snapshots, the post-purchase intake form, and the
+# ungated sample. All are unguessable URLs sent to one person; none should ever
+# appear in an index. Each also carries a noindex header or meta tag.
+User-agent: *
+Disallow: /r/
+Disallow: /snapshot/
+Disallow: /audit-intake/
+Disallow: /onboarding/
+Disallow: /forms/
+Disallow: /admin/
+Disallow: /s/
+
+Sitemap: https://answerfoundry.ai/sitemap.xml

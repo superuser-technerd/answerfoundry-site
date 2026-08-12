@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Your Answer Snapshot | AnswerFoundry</title>
+<meta name="description" content="Your private AI visibility snapshot.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--mist);background:var(--fog)}
+.hero{background:linear-gradient(180deg,var(--fog) 0%,#fff 100%);padding:88px 0 72px;text-align:center}
+.kicker{display:inline-block;background:var(--ember);color:var(--forge-dk);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;letter-spacing:-.03em;font-weight:800;max-width:780px;margin:0 auto 20px}
+h1 em{font-style:normal;color:var(--forge)}
+.sub{font-size:1.15rem;color:var(--slate);max-width:640px;margin:0 auto 34px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-note{margin-top:16px;font-size:.85rem;color:var(--mist)}
+section{padding:72px 0}
+.section-kick{color:var(--forge);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.lead{color:var(--slate);max-width:680px;font-size:1.05rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:44px}
+.card{border:1px solid var(--line);border-radius:14px;padding:30px;background:#fff;transition:box-shadow .15s,transform .15s}
+.card:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.icon{width:44px;height:44px;border-radius:10px;background:var(--ember);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px}
+.card h3{font-size:1.12rem;margin-bottom:10px;letter-spacing:-.01em}
+.card p{color:var(--slate);font-size:.95rem}
+.callout{background:var(--fog);border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-top:30px;font-size:.95rem;color:var(--slate)}
+.callout strong{color:var(--ink)}
+.formsec{background:var(--fog)}
+.form-wrap{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:0 12px 32px rgba(16,24,40,.06)}
+.form-field{margin-bottom:18px}
+.form-field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px;color:var(--ink)}
+.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:.95rem;font-family:inherit;color:var(--ink);background:#fff}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--forge)}
+.form-field textarea{resize:vertical}
+.optional-tag{color:var(--mist);font-weight:500;font-size:.8rem}
+.form-wrap button{width:100%;background:var(--forge);color:#fff;border:none;padding:14px 22px;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;transition:background .15s;margin-top:8px}
+.form-wrap button:hover{background:var(--forge-dk)}
+.trust-note{max-width:640px;margin:18px auto 0;font-size:.85rem;color:var(--mist);text-align:center}
+.disclaimer{font-size:.82rem;color:var(--mist);max-width:760px;margin:0 auto;text-align:center}
+.final{background:var(--navy);text-align:center;color:#fff}
+.final h2{color:#fff}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}.form-wrap{padding:28px 22px}}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+.consent-label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:400!important;font-size:.86rem;line-height:1.5;color:var(--slate)}
+.consent-label input[type=checkbox]{width:auto!important;flex:0 0 auto;margin-top:3px}
+.consent-label strong{color:var(--ink)}
+#phone-consent-field{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.submit-legal{margin-top:14px;font-size:.8rem;line-height:1.55;color:var(--mist)}
+.submit-legal a{color:var(--forge-dk);font-weight:600;text-decoration:none}
+.submit-legal a:hover{text-decoration:underline}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+
+.snap{max-width:820px;margin:0 auto;padding:0 24px}
+.snap section{padding:38px 0;border-top:1px solid var(--line)}
+.snap section:first-of-type{border-top:none}
+.snap h2{font-size:1.3rem;margin:0 0 14px;padding-bottom:10px;border-bottom:2px solid var(--ink)}
+.snap h2 .num{font-size:.7rem;color:var(--forge);letter-spacing:.12em;margin-right:11px;vertical-align:3px;font-weight:800}
+.snap p{color:var(--slate);margin:0 0 12px}
+.meta-row{display:flex;gap:22px;flex-wrap:wrap;font-size:.85rem;color:var(--mist);margin:0 0 4px}
+.meta-row b{color:var(--ink);font-weight:700}
+.score-hero{display:flex;align-items:center;gap:26px;background:var(--navy);color:#fff;padding:26px 28px;
+  margin:22px 0;border-radius:12px;flex-wrap:wrap}
+.score-hero__num{font-size:3.4rem;font-weight:800;line-height:1;letter-spacing:-.03em;white-space:nowrap}
+.score-hero__num span{font-size:1.3rem;opacity:.55;font-weight:400}
+.score-hero__label{font-weight:800;margin-bottom:6px;color:#fff}
+.score-hero__body p{margin:0;font-size:.9rem;line-height:1.55;color:#b9c4d8}
+.snap table{width:100%;border-collapse:collapse;font-size:.9rem;margin:8px 0 16px}
+.snap th{text-align:left;font-size:.7rem;text-transform:uppercase;letter-spacing:.08em;color:var(--mist);
+  font-weight:800;border-bottom:1.5px solid var(--ink);padding:8px 10px}
+.snap td{padding:9px 10px;border-bottom:1px solid var(--line);color:var(--slate);vertical-align:top}
+.y{color:#2e6b4f;font-weight:700}.n{color:#b42318;font-weight:700}.na{color:var(--mist);font-weight:700}
+.gaps{counter-reset:g;list-style:none;padding:0;margin:0}
+.gaps li{counter-increment:g;position:relative;padding:0 0 16px 38px;margin-bottom:16px;border-bottom:1px solid var(--line)}
+.gaps li:last-child{border-bottom:none}
+.gaps li::before{content:counter(g);position:absolute;left:0;top:1px;width:24px;height:24px;line-height:24px;
+  text-align:center;background:var(--forge);color:#fff;border-radius:50%;font-size:.74rem;font-weight:800}
+.gaps h3{font-size:1.02rem;margin:0 0 5px}
+.gaps p{margin:0;font-size:.94rem}
+.lockrow td{background:var(--fog);color:var(--slate);font-size:.84rem;border-bottom:none;border-top:1.5px dashed var(--mist)}
+.lockrow td b{color:var(--ink)}
+.gate-bar{background:var(--navy);color:#eef2f9;padding:13px 0;font-size:.87rem}
+.gate-bar .wrap{display:flex;gap:16px;align-items:center;justify-content:center;flex-wrap:wrap;text-align:center}
+.gate-bar strong{color:#fff}
+.gate-bar .meter{display:inline-block;width:150px;height:7px;background:rgba(255,255,255,.16);border-radius:99px;overflow:hidden;vertical-align:middle}
+.gate-bar .meter i{display:block;height:100%;background:var(--forge)}
+.paywall{background:var(--navy);color:#fff;border-radius:16px;padding:36px 32px;margin:40px 0;border-top:none!important}
+.paywall h2{color:#fff;border-bottom:1px solid rgba(255,255,255,.2)!important}
+.paywall p{color:#b9c4d8}
+.pw-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:12px;margin:22px 0 24px}
+.pw-stat{background:var(--navy2);border:1px solid rgba(255,255,255,.09);border-radius:11px;padding:16px 14px;text-align:center}
+.pw-stat b{display:block;font-size:1.65rem;font-weight:800;color:#fff;line-height:1.1;letter-spacing:-.02em}
+.pw-stat span{display:block;font-size:.76rem;color:#9fb0c8;margin-top:6px;line-height:1.35}
+ul.pw-list{list-style:none;padding:0;margin:0 0 24px;column-count:2;column-gap:28px;font-size:.9rem}
+ul.pw-list li{color:#cfd9e8;padding:6px 0 6px 22px;position:relative;break-inside:avoid}
+ul.pw-list li::before{content:"";position:absolute;left:0;top:12px;width:10px;height:10px;border:1.6px solid var(--forge);border-radius:2px}
+.pw-ctas{display:flex;gap:12px;flex-wrap:wrap;align-items:center}
+.paywall .btn.ghost{color:#fff;border-color:rgba(255,255,255,.38);background:transparent}
+.pw-fine{font-size:.79rem;color:#8fa0bd;margin:16px 0 0;line-height:1.6}
+.pw-fine a{color:#cfd9e8}
+.spin{width:34px;height:34px;border:3px solid var(--line);border-top-color:var(--forge);border-radius:50%;
+  animation:sp .8s linear infinite;margin:60px auto 18px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.err-box{max-width:640px;margin:60px auto;background:#fef3f2;border:1px solid #fecdc9;border-left:3px solid #b42318;
+  border-radius:0 12px 12px 0;padding:20px 24px}
+.err-box p{margin:0;color:#912018}
+.err-box a{color:#912018;font-weight:700}
+@media(max-width:640px){ul.pw-list{column-count:1}.paywall{padding:26px 20px}.score-hero{flex-direction:column;text-align:center}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+<main id="main">
+
+<div id="loading"><div class="spin" role="status" aria-label="Loading your snapshot"></div>
+  <p style="text-align:center;color:var(--slate)">Loading your snapshot&hellip;</p></div>
+
+<div id="error" hidden><div class="err-box"><p id="error-msg"></p>
+  <p style="margin-top:10px;font-size:.92rem">Reply to your snapshot email, or write to
+  <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>, and we'll send a fresh link.</p></div></div>
+
+<div id="report" hidden>
+  <header class="hero" style="padding:56px 0 34px">
+    <div class="wrap">
+      <span class="kicker">Free Answer Snapshot &middot; Preliminary</span>
+      <h1 id="h1">Your Answer Snapshot</h1>
+      <p class="sub" id="subline"></p>
+    </div>
+  </header>
+  <div class="gate-bar"><div class="wrap">
+    <span><strong id="gb-shown"></strong></span>
+    <span class="meter"><i id="gb-meter"></i></span>
+    <span id="gb-rest"></span>
+  </div></div>
+  <div class="snap" id="snap-body"></div>
+</div>
+
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var esc=function(s){return String(s==null?'':s).replace(/[&<>"']/g,function(c){
+    return {'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c];});};
+  var qs=new URLSearchParams(location.search);
+  var loading=document.getElementById('loading'),errb=document.getElementById('error'),
+      rep=document.getElementById('report');
+  function fail(m){loading.hidden=true;document.getElementById('error-msg').textContent=m;errb.hidden=false;}
+  if(!qs.get('d')||!qs.get('s')){fail('This snapshot link is incomplete — please use the link exactly as it appears in your email.');return;}
+
+  fetch('/api/snapshot-data?d='+encodeURIComponent(qs.get('d'))+'&s='+encodeURIComponent(qs.get('s')))
+   .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+   .then(function(res){
+     if(!res.ok||!res.j.ok){fail(res.j.error||'This snapshot could not be loaded.');return;}
+     var d=res.j,c=d.counts,pct=Math.max(4,Math.round(100*c.findingsShown/Math.max(1,c.findingsTotal)));
+     document.title='Answer Snapshot — '+d.business+' | AnswerFoundry';
+     document.getElementById('h1').innerHTML='What AI says about <em>'+esc(d.business)+'</em>';
+     document.getElementById('subline').textContent=
+       'A preliminary read on '+d.service+(d.city?' in '+d.city:'')+', run '+d.ranAt+
+       '. Limited prompt set, single point in time — not the full audit.';
+     document.getElementById('gb-shown').textContent=c.findingsShown+' of '+c.findingsTotal+' findings shown';
+     document.getElementById('gb-meter').style.width=pct+'%';
+     document.getElementById('gb-rest').textContent=c.findingsWithheld+' withheld · the full audit runs '+
+       c.sectionsInFullAudit+' sections';
+
+     var h='';
+     h+='<section><h2><span class="num">01</span> Where you stand</h2>'+
+        '<div class="meta-row"><span>Business <b>'+esc(d.business)+'</b></span>'+
+        (d.website?'<span>Site <b>'+esc(d.website)+'</b></span>':'')+
+        '<span>Tested <b>'+esc(d.ranAt)+'</b></span>'+
+        (d.reference?'<span>Ref <b>'+esc(d.reference)+'</b></span>':'')+'</div>';
+     if(d.score!=null){
+       h+='<div class="score-hero"><div class="score-hero__num">'+esc(d.score)+'<span>/'+esc(d.scoreOutOf)+'</span></div>'+
+          '<div class="score-hero__body"><p class="score-hero__label">AnswerFoundry Visibility Score</p>'+
+          '<p>A proprietary assessment, not a standardized industry metric. The five-category breakdown behind '+
+          'this number, and the reasoning for each, is part of the full audit.</p></div></div>';
+     }
+     if(d.verdict) h+='<p>'+esc(d.verdict)+'</p>';
+     if(d.appears) h+='<p><strong style="color:var(--ink)">You appear in '+esc(d.appears)+'.</strong></p>';
+     h+='</section>';
+
+     if(d.platforms&&d.platforms.length){
+       h+='<section><h2><span class="num">02</span> Platforms checked</h2><table>'+
+          '<tr><th>Platform</th><th>Checked</th><th>You appeared</th></tr>';
+       d.platforms.forEach(function(p){
+         h+='<tr><td>'+esc(p.name)+'</td><td class="'+(p.tested?'y':'na')+'">'+(p.tested?'Yes':'Not in snapshot')+
+            '</td><td class="'+(p.appeared?'y':'n')+'">'+(p.appeared?'Yes':'No')+'</td></tr>';
+       });
+       h+='<tr class="lockrow"><td colspan="3"><b>The snapshot uses a handful of representative questions.</b> '+
+          'The full audit runs a fixed prompt set across every platform and logs each run with the exact text, '+
+          'timestamp, model version, full response and the sources cited. <a href="#paywall" style="color:var(--forge-dk);font-weight:700">See the difference &rarr;</a></td></tr>'+
+          '</table></section>';
+     }
+
+     if(d.competitors&&d.competitors.shown&&d.competitors.shown.length){
+       h+='<section><h2><span class="num">03</span> Who shows up instead</h2><table>'+
+          '<tr><th>Competitor</th><th>What they have that you don\'t</th></tr>';
+       d.competitors.shown.forEach(function(x){
+         h+='<tr><td>'+esc(x.name||x)+'</td><td>'+esc(x.advantage||'')+'</td></tr>';
+       });
+       if(d.competitors.withheld>0)
+         h+='<tr class="lockrow"><td colspan="2"><b>'+d.competitors.withheld+' more competitors withheld</b>, each with '+
+            'the specific observable advantage they hold. <a href="#paywall" style="color:var(--forge-dk);font-weight:700">Unlock &rarr;</a></td></tr>';
+       h+='</table></section>';
+     }
+
+     if(d.accuracy)
+       h+='<section><h2><span class="num">04</span> Is the description of you accurate?</h2><p>'+esc(d.accuracy)+'</p>'+
+          '<table><tr class="lockrow"><td><b>The full audit checks every public source</b> — review platforms, '+
+          'directories, aggregators, your own structured data — and lists each conflict with the correct value and a '+
+          'severity rating. <a href="#paywall" style="color:var(--forge-dk);font-weight:700">Unlock &rarr;</a></td></tr></table></section>';
+
+     h+='<section><h2><span class="num">05</span> Three gaps we found</h2>'+
+        '<p>These are the three we can state confidently from a limited test. They are not the only three.</p><ol class="gaps">';
+     d.gaps.forEach(function(g){
+       h+='<li><h3>'+esc(g.title||g)+'</h3><p>'+esc(g.detail||'')+'</p></li>';
+     });
+     h+='</ol>';
+     if(c.findingsWithheld>0)
+       h+='<table><tr class="lockrow"><td>'+
+          '<b>'+c.findingsWithheld+' further findings were recorded and are withheld.</b> A full Foundry Audit on a '+
+          'business your size typically documents around '+c.auditFindingsTypical+', each with a named source and an '+
+          'observation date. <a href="#paywall" style="color:var(--forge-dk);font-weight:700">Unlock &rarr;</a></td></tr></table>';
+     h+='</section>';
+
+     if(d.nextStep)
+       h+='<section><h2><span class="num">06</span> The one thing to do first</h2><p>'+esc(d.nextStep)+'</p>'+
+          '<p style="font-size:.9rem;color:var(--mist)">Do this whether or not you ever buy anything from us.</p></section>';
+
+     var buy=d.buyUrl||'/pricing/';
+     h+='<section class="paywall" id="paywall"><h2>What the full audit adds</h2>'+
+        '<p>The snapshot answers one question: is there a real gap worth investigating? If the answer above is yes, '+
+        'the audit is the diagnosis — every platform, every conflict, every source, in the order to fix them.</p>'+
+        '<div class="pw-grid">'+
+        '<div class="pw-stat"><b>'+c.sectionsInFullAudit+'</b><span>sections, each with dated evidence</span></div>'+
+        '<div class="pw-stat"><b>~'+c.auditFindingsTypical+'</b><span>documented findings, each sourced</span></div>'+
+        '<div class="pw-stat"><b>27</b><span>prioritized actions with owner and hours</span></div>'+
+        '<div class="pw-stat"><b>$495</b><span>one time, credited if you continue</span></div></div>'+
+        '<ul class="pw-list">'+
+        '<li>ChatGPT, Perplexity and Claude queried, every run logged verbatim</li>'+
+        '<li>Full competitor visibility comparison</li>'+
+        '<li>Every accuracy conflict, with the correct value</li>'+
+        '<li>Which sources actually decide your category\'s answers</li>'+
+        '<li>Website and structured-data review from the live DOM</li>'+
+        '<li>Entity consistency across every platform you appear on</li>'+
+        '<li>Content gaps benchmarked against your competitors</li>'+
+        '<li>Local listings and review-signal check</li>'+
+        '<li>Visibility score with the full category breakdown</li>'+
+        '<li>Prioritized 30/60/90-day plan and a review call</li></ul>'+
+        '<div class="pw-ctas"><a class="btn" href="'+esc(buy)+'" data-af-event="snapshot_buy_audit">Get the full Foundry Audit &mdash; $495</a>'+
+        '<a class="btn ghost" href="/sample-audit/">See a real report first</a></div>'+
+        '<p class="pw-fine">You pay, fill in one two-minute form, and the automated technical scan of your site comes '+
+        'back on the spot. The assistant testing and the plan follow within about two weeks. Credited toward your first '+
+        'month of implementation if you continue within 14 days. No placement, ranking or citation in any AI answer is '+
+        'guaranteed — <a href="/ai-disclaimer/">read why</a>.</p></section>';
+
+     h+='<section><h2><span class="num">07</span> What this snapshot is and isn\'t</h2>'+
+        '<p>It reflects a limited set of representative questions at a single point in time. AI answers change — the '+
+        'same question asked twice, minutes apart, can return different results. Nothing here is a measurement of how '+
+        'these systems will behave tomorrow, and nothing here is a guarantee.</p>'+
+        '<p>Where something could not be verified, this snapshot says so rather than filling it in. '+
+        '<a href="/ai-disclaimer/" style="color:var(--forge-dk);font-weight:700">Full AI visibility disclaimer &rarr;</a></p>'+
+        '<p style="font-size:.86rem;color:var(--mist)">This is a private link generated for you. It is not indexed '+
+        'and is not listed anywhere on the site.</p></section>';
+
+     document.getElementById('snap-body').innerHTML=h;
+     loading.hidden=true; rep.hidden=false;
+   })
+   .catch(function(){fail('We could not load your snapshot. Please try the link again in a moment.');});
+})();
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>

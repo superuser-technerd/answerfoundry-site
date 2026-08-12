@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Onboarding | AnswerFoundry</title>
+<meta name="description" content="Post-purchase onboarding for AnswerFoundry engagements.">
+<meta name="robots" content="noindex, nofollow">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:1080px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--mist);background:var(--fog)}
+.hero{background:linear-gradient(180deg,var(--fog) 0%,#fff 100%);padding:88px 0 72px;text-align:center}
+.kicker{display:inline-block;background:var(--ember);color:var(--forge-dk);font-size:.8rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 14px;border-radius:99px;margin-bottom:22px}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.12;letter-spacing:-.03em;font-weight:800;max-width:780px;margin:0 auto 20px}
+h1 em{font-style:normal;color:var(--forge)}
+.sub{font-size:1.15rem;color:var(--slate);max-width:640px;margin:0 auto 34px}
+.hero-ctas{display:flex;gap:14px;justify-content:center;flex-wrap:wrap}
+.hero-note{margin-top:16px;font-size:.85rem;color:var(--mist)}
+section{padding:72px 0}
+.section-kick{color:var(--forge);font-weight:700;font-size:.85rem;letter-spacing:.08em;text-transform:uppercase;margin-bottom:10px}
+h2{font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.lead{color:var(--slate);max-width:680px;font-size:1.05rem}
+.grid3{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px;margin-top:44px}
+.card{border:1px solid var(--line);border-radius:14px;padding:30px;background:#fff;transition:box-shadow .15s,transform .15s}
+.card:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.icon{width:44px;height:44px;border-radius:10px;background:var(--ember);display:flex;align-items:center;justify-content:center;font-size:1.3rem;margin-bottom:18px}
+.card h3{font-size:1.12rem;margin-bottom:10px;letter-spacing:-.01em}
+.card p{color:var(--slate);font-size:.95rem}
+.callout{background:var(--fog);border:1px solid var(--line);border-radius:14px;padding:24px 28px;margin-top:30px;font-size:.95rem;color:var(--slate)}
+.callout strong{color:var(--ink)}
+.formsec{background:var(--fog)}
+.form-wrap{max-width:640px;margin:0 auto;background:#fff;border:1px solid var(--line);border-radius:16px;padding:40px;box-shadow:0 12px 32px rgba(16,24,40,.06)}
+.form-field{margin-bottom:18px}
+.form-field label{display:block;font-weight:700;font-size:.9rem;margin-bottom:6px;color:var(--ink)}
+.form-field input,.form-field select,.form-field textarea{width:100%;border:1px solid var(--line);border-radius:8px;padding:12px 14px;font-size:.95rem;font-family:inherit;color:var(--ink);background:#fff}
+.form-field input:focus,.form-field select:focus,.form-field textarea:focus{outline:none;border-color:var(--forge)}
+.form-field textarea{resize:vertical}
+.optional-tag{color:var(--mist);font-weight:500;font-size:.8rem}
+.form-wrap button{width:100%;background:var(--forge);color:#fff;border:none;padding:14px 22px;border-radius:8px;font-weight:700;font-size:1rem;cursor:pointer;transition:background .15s;margin-top:8px}
+.form-wrap button:hover{background:var(--forge-dk)}
+.trust-note{max-width:640px;margin:18px auto 0;font-size:.85rem;color:var(--mist);text-align:center}
+.disclaimer{font-size:.82rem;color:var(--mist);max-width:760px;margin:0 auto;text-align:center}
+.final{background:var(--navy);text-align:center;color:#fff}
+.final h2{color:#fff}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}.form-wrap{padding:28px 22px}}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+.consent-label{display:flex;gap:10px;align-items:flex-start;cursor:pointer;font-weight:400!important;font-size:.86rem;line-height:1.5;color:var(--slate)}
+.consent-label input[type=checkbox]{width:auto!important;flex:0 0 auto;margin-top:3px}
+.consent-label strong{color:var(--ink)}
+#phone-consent-field{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:14px 16px}
+.submit-legal{margin-top:14px;font-size:.8rem;line-height:1.55;color:var(--mist)}
+.submit-legal a{color:var(--forge-dk);font-weight:600;text-decoration:none}
+.submit-legal a:hover{text-decoration:underline}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+
+.state{max-width:700px;margin:0 auto}
+.spin{width:34px;height:34px;border:3px solid var(--line);border-top-color:var(--forge);border-radius:50%;
+  animation:sp .85s linear infinite;margin:0 auto 18px}
+@keyframes sp{to{transform:rotate(360deg)}}
+.receipt{background:#f0f9f4;border:1px solid #cfe8da;border-left:3px solid #2e6b4f;border-radius:0 12px 12px 0;
+  padding:18px 22px;margin:0 0 26px}
+.receipt p{margin:0;font-size:.94rem;color:#2e6b4f}
+.receipt strong{color:#1e4d38}
+.ref{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:.86rem;color:var(--slate)}
+.err-box{background:#fef3f2;border:1px solid #fecdc9;border-left:3px solid #b42318;border-radius:0 12px 12px 0;
+  padding:18px 22px;margin:0 0 22px}
+.err-box p{margin:0;color:#912018;font-size:.94rem}
+.err-box a{color:#912018;font-weight:700}
+.grid2{display:grid;grid-template-columns:1fr 1fr;gap:0 16px}
+@media(max-width:620px){.grid2{grid-template-columns:1fr}}
+.hint{font-size:.82rem;color:var(--mist);margin-top:5px;line-height:1.5}
+fieldset{border:none;padding:0;margin:0 0 8px}
+legend{font-weight:800;font-size:.96rem;color:var(--ink);padding:0;margin:26px 0 4px}
+.legend-note{font-size:.86rem;color:var(--slate);margin:0 0 16px}
+.tierbar{display:inline-block;background:var(--ember);color:var(--forge-dk);font-size:.76rem;font-weight:800;
+  letter-spacing:.07em;text-transform:uppercase;padding:5px 12px;border-radius:99px;margin-bottom:14px}
+.steps-num{counter-reset:st;list-style:none;padding:0;margin:0 0 26px}
+.steps-num li{counter-increment:st;position:relative;padding-left:40px;margin-bottom:14px;color:var(--slate);font-size:.96rem}
+.steps-num li::before{content:counter(st);position:absolute;left:0;top:0;width:26px;height:26px;line-height:26px;
+  text-align:center;background:var(--ember);color:var(--forge-dk);border-radius:50%;font-weight:800;font-size:.78rem}
+.steps-num li strong{color:var(--ink)}
+.livebox{border:1px solid var(--line);background:var(--fog);border-radius:12px;padding:20px 22px;margin:22px 0}
+.livebox h3{font-size:1rem;margin:0 0 6px}
+.livebox p{font-size:.9rem;color:var(--slate);margin:0}
+.engines{font-size:.84rem;color:var(--mist);margin-top:10px}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<nav>
+  <div class="wrap nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+<main id="main">
+
+<header class="hero" style="padding:60px 0 36px">
+  <div class="wrap">
+    <span class="kicker" id="kicker">Onboarding</span>
+    <h1 id="h1">Tell us what to test.</h1>
+    <p class="sub" id="sub">Your payment is confirmed. This is the only form &mdash; about two minutes, and everything
+    that happens next is built from what you put here.</p>
+  </div>
+</header>
+
+<section class="formsec" style="padding:40px 0 72px">
+  <div class="wrap">
+    <div class="form-wrap state">
+
+      <div id="checking" style="text-align:center;padding:26px 0">
+        <div class="spin" role="status" aria-label="Verifying your payment"></div>
+        <p style="color:var(--slate);font-size:.95rem;margin:0">Verifying your payment with Stripe&hellip;</p>
+      </div>
+
+      <div id="failed" hidden>
+        <div class="err-box"><p id="failed-msg"></p></div>
+        <p style="font-size:.94rem;color:var(--slate)">If you were charged, nothing is lost. Email
+        <a href="mailto:hello@answerfoundry.ai?subject=Onboarding%20problem">hello@answerfoundry.ai</a> with your Stripe
+        receipt and we'll take your details by email and start the same day.</p>
+      </div>
+
+      <div id="form-wrap" hidden>
+        <div class="receipt"><p><strong>Payment confirmed.</strong> <span id="paid-line"></span></p></div>
+        <form id="intake" novalidate>
+
+          <fieldset>
+            <legend>The basics</legend>
+            <p class="legend-note">This is what the prompt set is built from, so plain words beat marketing words.</p>
+            <div class="form-field">
+              <label for="business">Business name <span aria-hidden="true">*</span></label>
+              <input id="business" name="business" required autocomplete="organization">
+              <p class="hint">Exactly as customers would say it, not the legal entity name.</p>
+            </div>
+            <div class="form-field">
+              <label for="website">Website <span aria-hidden="true">*</span></label>
+              <input id="website" name="website" required inputmode="url" placeholder="yourbusiness.com">
+            </div>
+            <div class="grid2">
+              <div class="form-field">
+                <label for="service">Primary service <span aria-hidden="true">*</span></label>
+                <input id="service" name="service" required placeholder="e.g. kitchen remodels">
+              </div>
+              <div class="form-field">
+                <label for="city">City / service area <span aria-hidden="true">*</span></label>
+                <input id="city" name="city" required placeholder="e.g. Winter Park, FL">
+              </div>
+            </div>
+            <div class="grid2">
+              <div class="form-field">
+                <label for="contact_name">Your name</label>
+                <input id="contact_name" name="contact_name" autocomplete="name">
+              </div>
+              <div class="form-field">
+                <label for="phone">Phone <span class="optional-tag">(optional)</span></label>
+                <input id="phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="email">Where the report should go <span aria-hidden="true">*</span></label>
+              <input id="email" name="email" type="email" required autocomplete="email">
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>What your customers actually ask</legend>
+            <p class="legend-note">The single most useful box on this form. We ask the AI assistants your customers'
+            questions, in their words.</p>
+            <div class="form-field">
+              <label for="questions">Questions customers ask before they hire you</label>
+              <textarea id="questions" name="questions" rows="3" placeholder="One per line. Their words, not yours."></textarea>
+            </div>
+            <div class="form-field">
+              <label for="competitors">Competitors to benchmark against</label>
+              <textarea id="competitors" name="competitors" rows="2" placeholder="One per line. Two or three is plenty."></textarea>
+              <p class="hint">We check whether each is named in answers where you aren't.</p>
+            </div>
+            <div class="grid2">
+              <div class="form-field">
+                <label for="gbp">Google Business Profile link</label>
+                <input id="gbp" name="gbp" placeholder="Your Google Maps listing URL">
+              </div>
+              <div class="form-field">
+                <label for="other_locations">Other locations or areas served</label>
+                <input id="other_locations" name="other_locations">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset id="fs-access" hidden>
+            <legend>Access handoff</legend>
+            <p class="legend-note">Never passwords. A named person or an invite is all we need, and everything here is
+            optional &mdash; it just makes the work deeper.</p>
+            <div class="grid2">
+              <div class="form-field">
+                <label for="web_manager">Who manages the website</label>
+                <input id="web_manager" name="web_manager" placeholder="Name and email, or “me”">
+              </div>
+              <div class="form-field">
+                <label for="cms">Website platform</label>
+                <input id="cms" name="cms" placeholder="WordPress, Squarespace, Wix, custom&hellip;">
+              </div>
+            </div>
+            <div class="form-field">
+              <label for="access">What we can be invited to</label>
+              <textarea id="access" name="access" rows="2" placeholder="Google Business Profile, Search Console, analytics — tell us which you can add us to and we'll send the request."></textarea>
+              <p class="hint">Don't put credentials in this box. If you're ever asked for a password by email, it isn't us.</p>
+            </div>
+          </fieldset>
+
+          <fieldset id="fs-compliance" hidden>
+            <legend>Guardrails</legend>
+            <p class="legend-note">So nothing we write or recommend puts you the wrong side of a regulator, a board, or
+            your own brand rules.</p>
+            <div class="form-field">
+              <label for="compliance">Claims you can't make</label>
+              <textarea id="compliance" name="compliance" rows="2" placeholder="e.g. no outcome or cure claims, no before/after imagery, no “best” or “#1”, required disclaimers."></textarea>
+            </div>
+            <div class="grid2">
+              <div class="form-field">
+                <label for="terms_required">Terminology we must use (or never use)</label>
+                <input id="terms_required" name="terms_required" placeholder="e.g. “patients” not “clients”">
+              </div>
+              <div class="form-field">
+                <label for="avoid_competitors">Competitors never to name</label>
+                <input id="avoid_competitors" name="avoid_competitors">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset>
+            <legend>Anything else</legend>
+            <div class="form-field">
+              <label for="notes">Context that would change how we read the results</label>
+              <textarea id="notes" name="notes" rows="2" placeholder="A rebrand, a name change, a review you're worried about, a location you've closed."></textarea>
+            </div>
+          </fieldset>
+
+          <p class="form-err" id="intake-err" hidden></p>
+          <button type="submit" id="intake-btn">Start my audit</button>
+          <p class="agree-line">Submitting starts the work. We use these details only to produce and deliver your
+          report &mdash; see <a href="/privacy/">Privacy</a>. The Foundry Audit is a fixed-scope diagnostic and is
+          non-refundable once delivered; see <a href="/terms/">Terms</a>.</p>
+        </form>
+      </div>
+
+      <div id="done" hidden>
+        <div class="receipt"><p><strong id="done-head">You're booked in.</strong> Reference
+          <span class="ref" id="done-ref"></span> &mdash; a confirmation is in your inbox.</p></div>
+        <div id="done-body"></div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+</main>
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script>
+(function(){
+  var TIERS={
+    audit:{label:'Foundry Audit',kick:'Foundry Audit · Step 2 of 2',h1:'Tell us what to test.',
+      sub:'Your payment is confirmed. This is the only form — about two minutes, and your audit starts the moment you submit it.',
+      access:false,compliance:false,btn:'Start my audit'},
+    forge:{label:'Forge & Monitor',kick:'Forge & Monitor · Getting started',h1:'Let\u2019s set up your first month.',
+      sub:'Payment confirmed. This form gives us your baseline audit and everything we need to start implementing — about four minutes.',
+      access:true,compliance:true,btn:'Start my baseline audit'},
+    leader:{label:'Category Leader',kick:'Category Leader · Getting started',h1:'Let\u2019s map your whole category.',
+      sub:'Payment confirmed. Tell us about every location and service line you compete on — the prompt set has to cover all of them.',
+      access:true,compliance:true,btn:'Start my baseline audit'},
+    founding:{label:'Founding Client',kick:'Founding Client · Getting started',h1:'Welcome aboard, founding client.',
+      sub:'Payment confirmed at the founding rate. This form gives us your baseline audit and everything we need to start implementing.',
+      access:true,compliance:true,btn:'Start my baseline audit'}
+  };
+  var qs=new URLSearchParams(location.search);
+  var tier=(qs.get('tier')||'audit').toLowerCase(); if(!TIERS[tier]) tier='audit';
+  var T=TIERS[tier], sid=qs.get('session_id');
+  var checking=document.getElementById('checking'),failed=document.getElementById('failed'),
+      fmsg=document.getElementById('failed-msg'),fw=document.getElementById('form-wrap'),
+      form=document.getElementById('intake'),btn=document.getElementById('intake-btn'),
+      err=document.getElementById('intake-err'),done=document.getElementById('done');
+  var grant=null;
+
+  document.getElementById('kicker').textContent=T.kick;
+  document.getElementById('h1').textContent=T.h1;
+  document.getElementById('sub').textContent=T.sub;
+  btn.textContent=T.btn;
+  if(T.access) document.getElementById('fs-access').hidden=false;
+  if(T.compliance) document.getElementById('fs-compliance').hidden=false;
+  if(tier==='leader'){
+    var ol=document.getElementById('other_locations');
+    ol.placeholder='One location or service line per line, with its own city';
+    ol.parentNode.querySelector('label').innerHTML='Locations and service lines <span aria-hidden="true">*</span>';
+  }
+
+  function fail(m){checking.hidden=true;fw.hidden=true;fmsg.textContent=m;failed.hidden=false;}
+  if(!sid){fail('This page needs the link from your Stripe receipt — it carries the payment reference we verify against.');return;}
+
+  fetch('/api/verify-purchase?session_id='+encodeURIComponent(sid))
+   .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+   .then(function(res){
+     if(!res.ok||!res.j.ok){fail(res.j.error||'We could not verify that payment.');return;}
+     grant=res.j.grant;
+     document.getElementById('paid-line').textContent=
+       res.j.product+' — $'+res.j.amount+' '+res.j.currency+(res.j.email?' · receipt sent to '+res.j.email:'');
+     if(res.j.email) form.email.value=res.j.email;
+     if(res.j.name) form.contact_name.value=res.j.name;
+     if(res.j.phone) form.phone.value=res.j.phone;
+     checking.hidden=true; fw.hidden=false;
+     try{form.business.focus();}catch(e){}
+   })
+   .catch(function(){fail('We could not reach Stripe to verify your payment. Reload the page, or email hello@answerfoundry.ai.');});
+
+  form.addEventListener('submit',function(e){
+    e.preventDefault(); err.hidden=true;
+    var need=['business','website','service','city','email'];
+    for(var i=0;i<need.length;i++){
+      if(!form[need[i]].value.trim()){
+        err.textContent='Please fill in every field marked with an asterisk.';err.hidden=false;
+        form[need[i]].focus();return;
+      }
+    }
+    btn.disabled=true; btn.textContent='Starting\u2026';
+    var d={session_id:sid,grant:grant,tier:tier};
+    Array.prototype.forEach.call(form.elements,function(el){if(el.name)d[el.name]=el.value;});
+    fetch('/api/submit-intake',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(d)})
+     .then(function(r){return r.json().then(function(j){return{ok:r.ok,j:j};});})
+     .then(function(res){
+       if(!res.ok||!res.j.ok){
+         err.textContent=res.j.error||'Something went wrong. Email hello@answerfoundry.ai and we will take your details directly.';
+         err.hidden=false;btn.disabled=false;btn.textContent=T.btn;return;
+       }
+       var j=res.j;
+       fw.hidden=true;
+       document.getElementById('done-ref').textContent=j.reference;
+       document.getElementById('done-head').textContent=j.started?'Your audit is running now.':'You\u2019re booked in.';
+       var h='';
+       if(j.started){
+         h+='<div class="livebox"><h3>It\u2019s running as you read this</h3>'+
+            '<p>We\u2019re crawling your site and querying the AI assistants with your prompt set. Expected: '+j.eta+
+            '. You\u2019ll get an email the moment it\u2019s ready, so you can close this tab.</p>'+
+            '<p class="engines">Engines being queried: '+(j.engines||[]).join(' · ')+'</p></div>'+
+            '<p style="margin:0 0 22px"><a class="btn" href="'+j.statusUrl+'">Watch it run &rarr;</a></p>';
+       }
+       h+='<ol class="steps-num">'+
+          '<li><strong>Now</strong> &mdash; your site is crawled page by page: structured data, headings, canonicals, review markup.</li>'+
+          '<li><strong>Next</strong> &mdash; each AI assistant is queried with your prompt set. Exact wording, timestamp, full response and citations logged for every run, including the ones where you don\u2019t appear.</li>'+
+          '<li><strong>Then</strong> &mdash; scored across five categories, with the reasoning shown so you can argue with it, and a prioritised 30/60/90-day plan.</li>'+
+          (tier==='audit'?'<li><strong>After</strong> &mdash; reply to the report and we\u2019ll walk you through it.</li>'
+                         :'<li><strong>This week</strong> &mdash; implementation starts from the report\u2019s priority order, and you get a monthly report on what moved and what didn\u2019t.</li>')+
+          '</ol>'+
+          '<p><a class="btn ghost" href="/sample-audit/">See what the finished report looks like</a></p>';
+       document.getElementById('done-body').innerHTML=h;
+       done.hidden=false;
+       window.scrollTo({top:0,behavior:'smooth'});
+     })
+     .catch(function(){
+       err.textContent='Network error. Email hello@answerfoundry.ai and we will take your details directly.';
+       err.hidden=false;btn.disabled=false;btn.textContent=T.btn;
+     });
+  });
+})();
+</script>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
