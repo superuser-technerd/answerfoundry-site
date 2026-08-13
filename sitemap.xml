@@ -83,7 +83,7 @@ dateModified in each post's on-page JSON-LD. -->
 </url>
 <url>
 <loc>https://answerfoundry.ai/blog/</loc>
-<lastmod>2026-08-11</lastmod>
+<lastmod>2026-08-12</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -140,6 +140,12 @@ dateModified in each post's on-page JSON-LD. -->
 <lastmod>2026-08-08</lastmod>
 <changefreq>yearly</changefreq>
 <priority>0.3</priority>
+</url>
+<url>
+<loc>https://answerfoundry.ai/blog/how-to-track-ai-visibility-over-time.html</loc>
+<lastmod>2026-08-12</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 <url>
 <loc>https://answerfoundry.ai/blog/does-schema-markup-help-ai-visibility.html</loc>
