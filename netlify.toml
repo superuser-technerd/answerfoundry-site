@@ -1,0 +1,86 @@
+# answerfoundry.ai — site 8cdd363f-910f-4070-9df3-43cb0ef60ebe
+# The `answerfoundry-site` git repo publishes from its root (matches the
+# Netlify dashboard's current Publish directory setting: "/"). The original
+# drop-deployment zip this file was extracted from used a "site/" wrapper
+# subfolder that does NOT exist in this repo — publish was corrected to "."
+# here so a git-triggered build doesn't try to serve a nonexistent directory.
+
+[build]
+  publish = "."
+  command = ""
+
+[functions]
+  directory = "netlify/functions"
+  node_bundler = "esbuild"
+
+# Functions declare their own routes with `export const config = { path }`.
+# These redirects are a belt-and-braces fallback in case a deploy skips that.
+[[redirects]]
+  from = "/api/verify-purchase"
+  to = "/.netlify/functions/verify-purchase"
+  status = 200
+[[redirects]]
+  from = "/api/submit-intake"
+  to = "/.netlify/functions/submit-intake"
+  status = 200
+[[redirects]]
+  from = "/api/unlock-sample"
+  to = "/.netlify/functions/unlock-sample"
+  status = 200
+[[redirects]]
+  from = "/api/snapshot-data"
+  to = "/.netlify/functions/snapshot-data"
+  status = 200
+[[redirects]]
+  from = "/api/snapshot-create"
+  to = "/.netlify/functions/snapshot-create"
+  status = 200
+[[redirects]]
+  from = "/api/deliver-report"
+  to = "/.netlify/functions/deliver-report"
+  status = 200
+[[redirects]]
+  from = "/api/snapshot-approve"
+  to = "/.netlify/functions/snapshot-approve"
+  status = 200
+
+# Re-test is a *background* function: Netlify keys that off the `-background`
+# filename suffix, so the function keeps its own name as the canonical route and
+# this redirect only adds a stable public alias. Deliberately no
+# `export const config = { path }` on the function itself — declaring a custom
+# path there has been known to shadow the background dispatch and turn a 202
+# into a 10s timeout, which is the exact failure this route exists to avoid.
+[[redirects]]
+  from = "/api/retest"
+  to = "/.netlify/functions/retest-background"
+  status = 200
+
+# Private deliverables: unguessable paths, and never cached by an intermediary.
+[[headers]]
+  for = "/r/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Cache-Control = "private, no-store"
+[[headers]]
+  for = "/s/4cc5a873bbeedb7999eb5a06/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+[[headers]]
+  for = "/snapshot/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "private, no-store"
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow, noarchive"
+    Cache-Control = "private, no-store"
+[[headers]]
+  for = "/audit-intake/*"
+  [headers.values]
+    X-Robots-Tag = "noindex, nofollow"
+    Cache-Control = "private, no-store"
+[[headers]]
+  for = "/api/*"
+  [headers.values]
+    Cache-Control = "no-store"
