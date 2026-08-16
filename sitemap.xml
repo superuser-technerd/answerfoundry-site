@@ -83,7 +83,7 @@ dateModified in each post's on-page JSON-LD. -->
 </url>
 <url>
 <loc>https://answerfoundry.ai/blog/</loc>
-<lastmod>2026-08-15</lastmod>
+<lastmod>2026-08-16</lastmod>
 <changefreq>weekly</changefreq>
 <priority>0.8</priority>
 </url>
@@ -142,14 +142,8 @@ dateModified in each post's on-page JSON-LD. -->
 <priority>0.3</priority>
 </url>
 <url>
-<loc>https://answerfoundry.ai/blog/ai-mode-vs-ai-overviews.html</loc>
-<lastmod>2026-08-15</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-<url>
-<loc>https://answerfoundry.ai/blog/is-ai-search-reducing-my-website-traffic.html</loc>
-<lastmod>2026-08-14</lastmod>
+<loc>https://answerfoundry.ai/blog/does-my-business-need-an-faq-page.html</loc>
+<lastmod>2026-08-16</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
