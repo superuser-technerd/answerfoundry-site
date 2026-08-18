@@ -165,6 +165,62 @@ export async function mail({ to, subject, html, text, replyTo, tag }) {
     return { ok: true, status: r.status, id: j.id, via: "resend", detail: j };
 }
 
+/* --------------------------------------------------------------------- sms */
+/**
+ * SMS ping to the owner via GoHighLevel (Contacts + Conversations scopes
+ * only — nothing broader is needed). GHL's conversations API sends to a
+ * contact record, not a bare phone number, so this upserts a minimal
+ * contact for NOTIFY_PHONE first and then messages that contact.
+ *
+ * All three env vars (GHL_PIT, GHL_LOCATION_ID, NOTIFY_PHONE) are
+ * independent of mail delivery — this silently no-ops rather than
+ * throwing so a missing/misconfigured SMS setup never blocks the rest of
+ * the flow.
+ */
+export async function smsNotify(message) {
+    const pit = process.env.GHL_PIT;
+    const locationId = process.env.GHL_LOCATION_ID;
+    const phone = process.env.NOTIFY_PHONE;
+    if (!pit || !locationId || !phone) {
+          console.warn("[sms] skipped — GHL_PIT, GHL_LOCATION_ID or NOTIFY_PHONE not set");
+          return { ok: false, skipped: true };
+    }
+    const headers = {
+          authorization: `Bearer ${pit}`,
+          version: "2021-07-28",
+          "content-type": "application/json",
+    };
+    try {
+          const upsert = await fetch("https://services.leadconnectorhq.com/contacts/upsert", {
+                  method: "POST",
+                  headers,
+                  body: JSON.stringify({ locationId, phone, name: "AnswerFoundry Owner" }),
+                  signal: AbortSignal.timeout(15000),
+          });
+          const uj = await upsert.json().catch(() => ({}));
+          const contactId = uj?.contact?.id;
+          if (!upsert.ok || !contactId) {
+                  console.error("[sms] contact upsert failed", upsert.status, uj);
+                  return { ok: false, error: "contact upsert failed", detail: uj };
+          }
+          const send = await fetch("https://services.leadconnectorhq.com/conversations/messages", {
+                  method: "POST",
+                  headers,
+                  body: JSON.stringify({ type: "SMS", contactId, message: String(message).slice(0, 480) }),
+                  signal: AbortSignal.timeout(15000),
+          });
+          const sj = await send.json().catch(() => ({}));
+          if (!send.ok) {
+                  console.error("[sms] send failed", send.status, sj);
+                  return { ok: false, error: "send failed", detail: sj };
+          }
+          return { ok: true, detail: sj };
+    } catch (e) {
+          console.error("[sms] GHL request failed", e?.message || e);
+          return { ok: false, error: String(e?.message || e) };
+    }
+}
+
 /** Branded email wrapper. Tables and inline styles, because email clients. */
 export function shell({ preheader = "", heading, body, cta, ctaUrl, footNote = "" }) {
     return `<!DOCTYPE html><html><body style="margin:0;padding:0;background:#f7f8fb">

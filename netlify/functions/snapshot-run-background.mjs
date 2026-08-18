@@ -11,13 +11,15 @@
  * prompt set against a full crawl; this one answers only what the free page
  * promises — do you appear, who appears instead, is the description accurate.
  *
- * Nothing here emails the prospect. It emails Kenny a review with an approve
- * link, and only that link releases the snapshot.
+ * The finished snapshot is emailed straight to the prospect the moment it's
+ * ready — no human approval gate. Kenny gets an FYI email after the fact
+ * (or a flagged failure email if delivery to the lead didn't go through),
+ * never a review-and-approve step beforehand.
  */
-import { json, sign, verify, mail, shell, esc, ref as mkRef, NOTIFY, SITE } from "./_lib/util.mjs";
+import { json, verify, mail, shell, esc, ref as mkRef, NOTIFY } from "./_lib/util.mjs";
 import { putJson } from "./_lib/blobs.mjs";
 import { buildPrompts, configuredProviders, snapshotProviders, runOne } from "./_lib/engines.mjs";
-import { buildPayload, fitPayload, scoreFromRuns, STORE } from "./_lib/snapshot.mjs";
+import { buildPayload, fitPayload, scoreFromRuns, emailSnapshotToLead, STORE } from "./_lib/snapshot.mjs";
 
 /** Unbranded prompts to run for a free snapshot. Each one costs money. */
 const LEAN_SCORED = 3;
@@ -94,26 +96,36 @@ export default async (req) => {
     if (trimmed) log("payload trimmed to fit the link budget", tight ? "(still tight)" : "");
 
     const s = scoreFromRuns(runs);
-    const approveKey = sign(`approve:${reference}`);
-    const approveUrl = `${SITE}/api/snapshot-approve?ref=${encodeURIComponent(reference)}&k=${encodeURIComponent(approveKey)}`;
+
+    // Auto-send: the free Snapshot goes straight to the lead as soon as it's
+    // ready. No human click gates this anymore.
+    const sentResult = await emailSnapshotToLead({ email: intake.email, payload: fitted, url });
+    if (!sentResult?.ok) log("delivery to lead FAILED", sentResult);
 
     await putJson(STORE, `${reference}/snapshot`, {
       reference, createdAt: new Date().toISOString(), intake, payload: fitted, url,
       runs: runs.map((r) => ({ platform: r.platform, prompt: r.prompt, scored: r.scored, ok: r.ok,
         appeared: r.appeared, error: r.error || null, response: String(r.response || "").slice(0, 1500) })),
-      sent: false,
+      sent: !!sentResult?.ok,
+      sentAt: sentResult?.ok ? new Date().toISOString() : null,
     });
 
+    const failed = runs.filter((r) => !r.ok);
     await mail({
       to: NOTIFY,
       replyTo: intake.email,
-      tag: "snapshot-review",
-      subject: `REVIEW SNAPSHOT · ${intake.business} · ${s.score ?? "—"}/100 · ${s.appears}`,
+      tag: sentResult?.ok ? "snapshot-sent" : "snapshot-send-failed",
+      subject: sentResult?.ok
+        ? `Snapshot sent · ${intake.business} · ${s.score ?? "—"}/100 · ${s.appears}`
+        : `SNAPSHOT SEND FAILED · ${intake.business} — handle by hand`,
       html: shell({
-        preheader: `Automated snapshot ready for ${intake.business}. Nothing has been sent to them yet.`,
-        heading: `Snapshot ready for review — ${esc(intake.business)}`,
-        body: `<p style="margin:0 0 14px"><strong>Nothing has gone to the prospect yet.</strong> Open the snapshot,
-            read it, then approve if it holds up.</p>
+        preheader: sentResult?.ok
+          ? `Sent automatically to ${intake.email}. FYI only — nothing left to do.`
+          : `The automated run finished but delivery to the lead failed — send it by hand.`,
+        heading: sentResult?.ok ? `Snapshot sent — ${esc(intake.business)}` : `Snapshot ready but NOT sent — ${esc(intake.business)}`,
+        body: `<p style="margin:0 0 14px">${sentResult?.ok
+            ? `<strong>Already emailed to ${esc(intake.email)}.</strong> This is an FYI — no approval step, no action needed.`
+            : `<strong>Delivery to ${esc(intake.email)} failed.</strong> Open the link below and send it by hand.`}</p>
           <table style="width:100%;border-collapse:collapse;background:#f7f8fb;border:1px solid #e6e9f0;border-radius:8px;margin-bottom:16px">
             ${[["Business", intake.business], ["Website", intake.website], ["Service", intake.service],
                ["City", intake.city], ["Lead email", intake.email], ["Phone", intake.phone],
@@ -126,21 +138,22 @@ export default async (req) => {
               .map(([k, v]) => `<tr><td style="padding:6px 10px;color:#98a2b3;font-size:12.5px;white-space:nowrap;vertical-align:top">${k}</td>
                 <td style="padding:6px 10px;font-size:13px;color:#101828">${esc(String(v))}</td></tr>`).join("")}
           </table>
-          <p style="margin:0 0 6px"><a href="${url}" style="color:#c2410c;font-weight:700">Preview the snapshot they would see →</a></p>
-          <p style="margin:0 0 16px;font-size:12.5px;color:#98a2b3">Reference ${esc(reference)}. Approving emails this exact page to ${esc(intake.email)}.</p>
-          ${runs.filter((r) => !r.ok).length
-            ? `<p style="font-size:12.5px;color:#b42318"><strong>${runs.filter((r) => !r.ok).length} call(s) failed:</strong>
-               ${esc([...new Set(runs.filter((r) => !r.ok).map((r) => `${r.platform}: ${r.error}`))].join(" · ").slice(0, 400))}</p>`
+          <p style="margin:0 0 6px"><a href="${url}" style="color:#c2410c;font-weight:700">${sentResult?.ok ? "View what they received" : "Open the snapshot"} →</a></p>
+          <p style="margin:0 0 16px;font-size:12.5px;color:#98a2b3">Reference ${esc(reference)}.</p>
+          ${failed.length
+            ? `<p style="font-size:12.5px;color:#b42318"><strong>${failed.length} call(s) failed:</strong>
+               ${esc([...new Set(failed.map((r) => `${r.platform}: ${r.error}`))].join(" · ").slice(0, 400))}</p>`
             : ""}`,
-        cta: "Approve and send to the lead",
-        ctaUrl: approveUrl,
-        footNote: `If it doesn't hold up, just don't click. Nothing is sent unless you approve it, and the stored
-          snapshot expires with the link.`,
+        cta: sentResult?.ok ? undefined : "Open the snapshot to send by hand",
+        ctaUrl: sentResult?.ok ? undefined : url,
+        footNote: sentResult?.ok
+          ? `No approval step in this flow anymore — it went out automatically the moment it was ready.`
+          : `Check RESEND_API_KEY / SMTP config if this keeps happening.`,
       }),
     });
 
-    log("review email sent; awaiting approval");
-    return json({ ok: true, reference, awaitingApproval: true });
+    log(sentResult?.ok ? "auto-sent to lead" : "auto-send FAILED — flagged to owner");
+    return json({ ok: true, reference, sent: !!sentResult?.ok });
   } catch (e) {
     console.error(`[snapshot ${reference}] failed`, e?.message || e);
     await notifyFailure({ reference, intake, reason: String(e?.message || e) });

@@ -14,7 +14,7 @@
  *
  * contact: formats and forwards, so a $495 enquiry can't sit unseen in a dashboard.
  */
-import { prescan, prescanHtml, mail, shell, esc, normUrl, isEmail, sign, ref as mkRef, NOTIFY, SITE } from "./_lib/util.mjs";
+import { prescan, prescanHtml, mail, shell, esc, normUrl, isEmail, sign, smsNotify, ref as mkRef, NOTIFY, SITE } from "./_lib/util.mjs";
 import { checkSnapshotAllowance, LIMITS } from "./_lib/ratelimit.mjs";
 
 const pick = (o, ...keys) => {
@@ -128,9 +128,9 @@ export default async (req) => {
           <ol style="padding-left:20px;font-size:13px;color:#475467">${prompts.map((p) => `<li style="margin-bottom:4px">${esc(p)}</li>`).join("")}</ol>
 
           ${allowance.allowed
-            ? `<p style="margin:18px 0 6px"><strong>Automated run started.</strong> The engines are being queried now.
-                 A second email will arrive with the finished snapshot and an approve button — nothing reaches the
-                 prospect until you click it. If that email never comes, run the prompts above by hand.</p>`
+            ? `<p style="margin:18px 0 6px"><strong>Automated run started.</strong> The engines are being queried now,
+                 and the finished snapshot goes straight to the lead — no approval step. You'll get an FYI email once
+                 it's sent. If that email never comes, run the prompts above by hand.</p>`
             : `<p style="margin:18px 0 6px;padding:12px;background:#fff6ed;border:1px solid #f5c9a3;border-radius:8px">
                  <strong style="color:#8a6212">Automated run was NOT started — no API spend on this one.</strong><br>
                  <span style="font-size:13px;color:#475467">${esc(allowance.detail || allowance.reason)}</span><br>
@@ -157,7 +157,16 @@ export default async (req) => {
         }).catch((e) => console.error("[snapshot] dispatch failed", e.message))
       : Promise.resolve();
 
-    await Promise.all([ack, brief, dispatch]);
+    // Immediate SMS ping so a request never sits unseen — independent of mail
+    // and of the automated run itself, so it fires even when the allowance
+    // check blocks the run.
+    const sms = smsNotify(
+      `AnswerFoundry: new free Snapshot request — ${business} (${city}).${
+        allowance.allowed ? " Auto-running now." : " NOT auto-run — check email."
+      }`,
+    );
+
+    await Promise.all([ack, brief, dispatch, sms]);
     return new Response("ok");
   }
 
