@@ -7,7 +7,7 @@
 
 [build]
   publish = "."
-  command = ""
+  command = "node scripts/verify-blog-integrity.js"
 
 [functions]
   directory = "netlify/functions"
