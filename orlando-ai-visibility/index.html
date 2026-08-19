@@ -131,7 +131,20 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
   gtag('js', new Date());
 
   gtag('config', 'AW-18379130059');
-</script></head>
+</script>
+<!-- OpenAI Ads pixel (oaiq) -->
+<script>
+  (function (w, d, s, u) {
+    if (w.oaiq) return;
+    var q = function () { q.q.push(arguments); };
+    q.q = []; w.oaiq = q;
+    var js = d.createElement(s); js.async = true; js.src = u;
+    var f = d.getElementsByTagName(s)[0]; f.parentNode.insertBefore(js, f);
+  })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+
+  oaiq("init", { pixelId: "6PGYvZo3bX32vxEThtWUYq" });
+</script>
+</head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
 
