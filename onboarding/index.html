@@ -151,7 +151,20 @@ legend{font-weight:800;font-size:.96rem;color:var(--ink);padding:0;margin:26px 0
   gtag('js', new Date());
 
   gtag('config', 'AW-18379130059');
-</script></head>
+</script>
+<!-- OpenAI Ads pixel (oaiq) -->
+<script>
+  (function (w, d, s, u) {
+    if (w.oaiq) return;
+    var q = function () { q.q.push(arguments); };
+    q.q = []; w.oaiq = q;
+    var js = d.createElement(s); js.async = true; js.src = u;
+    var f = d.getElementsByTagName(s)[0]; f.parentNode.insertBefore(js, f);
+  })(window, document, "script", "https://bzrcdn.openai.com/sdk/oaiq.min.js");
+
+  oaiq("init", { pixelId: "6PGYvZo3bX32vxEThtWUYq" });
+</script>
+</head>
 <body>
 <a class="skip" href="#main">Skip to content</a>
 <nav>
@@ -423,6 +436,7 @@ legend{font-weight:800;font-size:.96rem;color:var(--ink);padding:0;margin:26px 0
        }
        var j=res.j;
        fw.hidden=true;
+       if (window.oaiq) oaiq("measure", "order_created", { type: "contents" });
        document.getElementById('done-ref').textContent=j.reference;
        document.getElementById('done-head').textContent=j.started?'Your audit is running now.':'You\u2019re booked in.';
        var h='';
