@@ -26,12 +26,13 @@ AnswerFoundry provides marketing and AI-visibility consulting only. It does not 
 ## Packages and pricing
 
 - [Answer Snapshot](https://answerfoundry.ai/answer-snapshot/): free, limited preliminary check of how AI systems currently describe a business.
-- **Foundry Audit** — $495 one-time. AI answer testing across major engines, competitor visibility comparison, website and structured-data review, local listings and review-signal check, prioritized 90-day action plan. Non-refundable once delivered.
-- **Forge & Monitor** — $999/month, 3-month minimum then month-to-month with 30 days' notice. Everything in the Foundry Audit plus ongoing AEO/SEO implementation, content engineered for AI citation, entity and listings management, and a monthly report and call.
-- **Category Leader** — $1,999/month. Multi-location and multi-service strategy, digital PR and authority citations, quarterly competitive war-gaming, priority implementation support.
-- **Founding Client** — $799/month for the first three months, then $999/month.
+- **Foundry Audit** — $795 one-time standard price. Founding launch price is $495 through September 19, 2026 or the first 10 paid audits, whichever comes first. AI answer testing across major engines, competitor visibility comparison, website and structured-data review, local listings and review-signal check, prioritized 90-day action plan. Non-refundable once delivered.
+- **Fix Sprint** — $1,500 one-time. A fixed-scope implementation engagement after an audit or equivalent documented diagnosis.
+- **Forge & Monitor** — $1,250/month, 3-month minimum then month-to-month with 30 days' notice. Everything in the Foundry Audit plus ongoing AEO/SEO implementation, content engineered for AI citation, entity and listings management, and a monthly report and call.
+- **Category Leader** — from $2,500/month. Multi-location and multi-service strategy, digital PR and authority citations, quarterly competitive war-gaming, priority implementation support.
+- **Founding Client** — $999/month for the first three months, then the standard $1,250/month rate. Limited to the first five qualified Forge & Monitor clients.
 
-The $495 Foundry Audit fee is credited toward the first month if an ongoing engagement starts within 14 days. Full detail: [Pricing](https://answerfoundry.ai/pricing/).
+The full Foundry Audit fee paid is credited toward the first month if an ongoing engagement starts within 14 days. Full detail: [Pricing](https://answerfoundry.ai/pricing/).
 
 ## How engagements run
 

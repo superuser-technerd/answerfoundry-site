@@ -40,8 +40,8 @@ export default async (req) => {
         assistant was queried, because it was compiled without a client engagement. A paid audit queries ChatGPT,
         Perplexity and Claude and logs every run verbatim. Second, §20 is the limitations section, and it's there because a report that
         only tells you the flattering parts isn't worth paying for.</p>
-        <p>If it holds up, the same thing run on your business is $495.</p>`,
-      cta: "Get this run on your business — $495",
+        <p>If it holds up, the standard Foundry Audit is $795. The founding launch price is $495 through September 19, 2026 or the first 10 paid audits, whichever comes first.</p>`,
+      cta: "Claim the founding audit — $495",
       ctaUrl: STRIPE_AUDIT_LINK,
       footNote: `You asked for this on ${SITE}/sample-audit/ — that's the only reason you're getting it. No sequence,
         no list, no sales calls. AnswerFoundry does not guarantee placement or citation in any AI-generated answer.`,

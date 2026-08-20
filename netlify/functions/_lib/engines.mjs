@@ -49,7 +49,7 @@ export function buildPrompts({ service, city, business, competitors = [], questi
  * fewer businesses, and that error is not random: it biases every report toward
  * "you do not appear", which overstates the exact problem this product is sold
  * to fix. Downgrade only with a measured comparison in hand, never to save
- * cents on a $495 deliverable.
+ * cents on a paid diagnostic deliverable.
  */
 export const MODELS = {
     openai: process.env.OPENAI_MODEL || "gpt-4.1",

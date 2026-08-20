@@ -198,10 +198,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
             <option value="">Select a reason</option>
             <option>General question</option>
             <option>Services and pricing</option>
-            <option>Foundry Audit ($495)</option>
-            <option>Forge &amp; Monitor plan</option>
-            <option>Category Leader plan</option>
-            <option>Founding Client Program</option>
+            <option>Foundry Audit ($795 standard; $495 founding launch)</option>
+            <option>Fix Sprint ($1,500 one-time)</option>
+            <option>Forge &amp; Monitor ($1,250/month)</option>
+            <option>Category Leader (from $2,500/month)</option>
+            <option>Founding Client Program ($999/month for first 3 months)</option>
             <option>Strategy call</option>
             <option>Free Answer Snapshot</option>
             <option>Partner program</option>
@@ -251,7 +252,7 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
         <input type="hidden" name="consent_text" id="consent_text" value="">
         <input type="hidden" name="consent_timestamp" id="consent_timestamp" value="">
         <input type="hidden" name="consent_page" id="consent_page" value="">
-        <input type="hidden" name="terms_version" value="2026-08-08">
+        <input type="hidden" name="terms_version" value="2026-08-20">
 
         <p class="agree-line">By submitting this form, I agree to the
           <a href="/terms/">Terms of Service</a> and the <a href="/privacy/">Privacy Policy</a>.</p>
@@ -330,10 +331,11 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
    pricing CTA lands on a form that already knows why they came. */
 (function(){
   var MAP = {
-    'foundry-audit':   ['Foundry Audit ($495)',      "I'd like to book a Foundry Audit."],
-    'forge-monitor':   ['Forge & Monitor plan',      "I'd like to talk about the Forge & Monitor plan."],
-    'category-leader': ['Category Leader plan',      "I'd like to talk about the Category Leader plan."],
-    'founding-client': ['Founding Client Program',   "I'd like to apply for the Founding Client Program."],
+    'foundry-audit':   ['Foundry Audit ($795 standard; $495 founding launch)', "I'd like to book a Foundry Audit."],
+    'fix-sprint':      ['Fix Sprint ($1,500 one-time)', "I'd like to scope a Fix Sprint based on an existing audit or diagnosis."],
+    'forge-monitor':   ['Forge & Monitor ($1,250/month)', "I'd like to talk about the Forge & Monitor plan."],
+    'category-leader': ['Category Leader (from $2,500/month)', "I'd like to talk about the Category Leader plan."],
+    'founding-client': ['Founding Client Program ($999/month for first 3 months)', "I'd like to apply for the Founding Client Program."],
     'strategy-call':   ['Strategy call',             "I'd like to book a strategy call."]
   };
   var key = new URLSearchParams(window.location.search).get('reason');
