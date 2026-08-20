@@ -12,7 +12,7 @@
  * claimed to know what ChatGPT said, without having asked it, would be a lie —
  * and this business is sold on not doing that.
  *
- * contact: formats and forwards, so a $495 enquiry can't sit unseen in a dashboard.
+ * contact: formats and forwards, so a paid-service enquiry can't sit unseen in a dashboard.
  */
 import { prescan, prescanHtml, mail, shell, esc, normUrl, isEmail, sign, ref as mkRef, NOTIFY, SITE } from "./_lib/util.mjs";
 import { checkSnapshotAllowance, LIMITS } from "./_lib/ratelimit.mjs";
