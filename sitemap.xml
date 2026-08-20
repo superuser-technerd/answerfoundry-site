@@ -142,6 +142,12 @@ dateModified in each post's on-page JSON-LD. -->
 <priority>0.3</priority>
 </url>
 <url>
+<loc>https://answerfoundry.ai/blog/do-backlinks-help-ai-search-visibility.html</loc>
+<lastmod>2026-08-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://answerfoundry.ai/blog/does-being-active-on-reddit-improve-ai-visibility.html</loc>
 <lastmod>2026-08-19</lastmod>
 <changefreq>monthly</changefreq>
