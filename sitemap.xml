@@ -142,6 +142,12 @@ dateModified in each post's on-page JSON-LD. -->
 <priority>0.3</priority>
 </url>
 <url>
+<loc>https://answerfoundry.ai/blog/how-long-until-new-content-shows-up-in-ai-search.html</loc>
+<lastmod>2026-08-22</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://answerfoundry.ai/blog/does-my-business-need-a-wikipedia-page.html</loc>
 <lastmod>2026-08-21</lastmod>
 <changefreq>monthly</changefreq>
