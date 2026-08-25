@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675" width="1200" height="675">
+  <rect width="1200" height="675" fill="#0b1b34"/>
+  <text x="600" y="110" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="44" font-weight="700" fill="#ffffff">Same question. Different sources.</text>
+  <text x="600" y="150" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="20" fill="#b9c4d6">What ChatGPT, Perplexity, and Google AI tend to cite when asked the same question</text>
+
+  <!-- ChatGPT card -->
+  <rect x="70" y="210" width="330" height="330" rx="14" fill="#12274a" stroke="#e8590c" stroke-width="2"/>
+  <text x="235" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#ffffff">ChatGPT</text>
+  <text x="235" y="310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Wikipedia</text>
+  <text x="235" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Reddit threads</text>
+  <text x="235" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Forbes / media</text>
+
+  <!-- Perplexity card -->
+  <rect x="435" y="210" width="330" height="330" rx="14" fill="#12274a" stroke="#e8590c" stroke-width="2"/>
+  <text x="600" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Perplexity</text>
+  <text x="600" y="310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Reddit &amp; LinkedIn</text>
+  <text x="600" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Industry directories</text>
+  <text x="600" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">G2 / review sites</text>
+
+  <!-- Google AI card -->
+  <rect x="800" y="210" width="330" height="330" rx="14" fill="#12274a" stroke="#e8590c" stroke-width="2"/>
+  <text x="965" y="260" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="28" font-weight="700" fill="#ffffff">Google AI</text>
+  <text x="965" y="310" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Facebook / Yelp</text>
+  <text x="965" y="345" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Business listings</text>
+  <text x="965" y="380" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="18" fill="#dbe3f0">Local map pack</text>
+
+  <text x="600" y="610" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" fill="#8b97ab">Source patterns observed across test prompts, not a guarantee of citation</text>
+  <text x="600" y="640" text-anchor="middle" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="600" fill="#e8590c">AnswerFoundry · answerfoundry.ai</text>
+</svg>
