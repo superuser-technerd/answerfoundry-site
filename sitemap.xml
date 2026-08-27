@@ -321,4 +321,10 @@ dateModified in each post's on-page JSON-LD. -->
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://answerfoundry.ai/blog/can-i-pay-to-appear-in-ai-answers.html</loc>
+<lastmod>2026-08-27</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
