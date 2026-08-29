@@ -328,6 +328,12 @@ dateModified in each post's on-page JSON-LD. -->
 <priority>0.7</priority>
 </url>
 <url>
+<loc>https://answerfoundry.ai/blog/how-to-fix-incorrect-ai-answers-about-my-business.html</loc>
+<lastmod>2026-08-29</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://answerfoundry.ai/blog/do-youtube-videos-help-ai-search-visibility.html</loc>
 <lastmod>2026-08-28</lastmod>
 <changefreq>monthly</changefreq>
