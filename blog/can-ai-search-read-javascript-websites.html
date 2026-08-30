@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can AI Search Engines Read My Website If It's Built With JavaScript? | AnswerFoundry</title>
+<meta name="description" content="Most AI crawlers fetch raw HTML and never run your JavaScript. Here's what that means for whether ChatGPT, Claude, and Perplexity can see your site at all.">
+<meta property="og:title" content="Can AI Search Engines Read My Website If It's Built With JavaScript?">
+<meta property="og:description" content="Most AI crawlers fetch raw HTML and never run your JavaScript. Here's what that means for your business.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/can-ai-search-read-javascript-websites.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can AI Search Engines Read My Website If It's Built With JavaScript?">
+<meta name="twitter:description" content="Most AI crawlers fetch raw HTML and never run your JavaScript. Here's what that means for your business.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/can-ai-search-read-javascript-websites.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Can AI search engines read my website if it's built with JavaScript?",
+  "description": "Most AI crawlers fetch raw HTML and never run your JavaScript. Here's what that means for whether ChatGPT, Claude, and Perplexity can see your site at all.",
+  "datePublished": "2026-08-30",
+  "dateModified": "2026-08-30",
+  "author": {
+    "@type": "Person",
+    "name": "Kenny Chantasi",
+    "jobTitle": "DO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AnswerFoundry LLC",
+    "url": "https://answerfoundry.ai/"
+  },
+  "mainEntityOfPage": "https://answerfoundry.ai/blog/can-ai-search-read-javascript-websites.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://answerfoundry.ai/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://answerfoundry.ai/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "AI search and JavaScript", "item": "https://answerfoundry.ai/blog/can-ai-search-read-javascript-websites.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "How do I check whether my content is in the raw HTML?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In Chrome, use View Page Source rather than Inspect. View Page Source shows the HTML your server sent before any JavaScript ran, which is roughly what a non-rendering crawler receives. Inspect shows the rendered DOM after JavaScript, which is what your browser built. If your phone number, address, or main body copy appears in Inspect but not in View Page Source, a non-rendering crawler will not see it on a direct fetch."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does this mean I have to rebuild my website?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. Most sites that fail this check fail on specific elements — a chat-widget phone number, a JavaScript-injected address block, a tabbed services section — rather than the whole page. Moving those few items into the server-rendered HTML is normally a much smaller job than a rebuild."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is Google affected the same way?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google Search runs JavaScript with an evergreen version of Chromium, and Gemini uses the same infrastructure. That is why a site can rank normally in Google and still be largely invisible to ChatGPT, Claude, or Perplexity, which fetch raw HTML instead."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do hosted website builders handle this better or worse than a custom build?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "In one 2026 preprint study of 368 small-business sites, sites on builders that server-render by default (Wix and Webflow, grouped) were missing answer-critical content from the raw fetch 4.0% of the time, versus 28.3% for all other platforms. That is descriptive of one non-representative sample, not a rule, but it cuts against the assumption that a custom build is automatically safer here."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / AI search and JavaScript</p>
+  <p class="post-date">Published August 30, 2026</p>
+  <h1>Can AI search engines read my website if it's built with JavaScript?</h1>
+
+  <p class="lede">Mostly, no. Google runs your JavaScript before it indexes your page. The major AI crawlers do not — they fetch the raw HTML your server sends and read whatever is already in it. If your phone number, your services list, or your main body copy only appears after a script runs, ChatGPT, Claude, and Perplexity are working from a page that never contained it.</p>
+
+  <div class="prose">
+    <h2>What this means</h2>
+    <p>Every web page arrives in two stages. First your server sends a file of HTML. Then your browser runs whatever JavaScript that file points to, and the script fills in the rest — a services grid, a booking widget, a location block, sometimes the entire body of the page. What you see on screen is stage two. What a crawler sees depends entirely on whether it bothers to run stage two.</p>
+    <p>Googlebot does. Google Search renders pages with an evergreen version of Chromium, queues every page that returns a 200 status code for rendering, and indexes the rendered result (Google Search Central, 2026). The AI crawlers behave differently. A joint analysis by Vercel and MERJ across their network found that none of the major AI crawlers render JavaScript, including OpenAI's GPTBot, OAI-SearchBot, and ChatGPT-User, Anthropic's ClaudeBot, PerplexityBot, Meta's crawler, and ByteDance's Bytespider (Zecchini et al., 2024). They do download JavaScript files — ChatGPT in 11.50% of requests, Claude in 23.84% — but they never execute them.</p>
+
+    <img src="/blog/images/can-ai-search-read-javascript-websites.jpg" alt="A code editor on a monitor displaying JavaScript source code in a dark color scheme." style="width:100%;border-radius:10px;margin:24px 0" loading="lazy">
+    <p style="font-size:.78rem;color:var(--mist);margin-top:-16px;margin-bottom:24px">Photo: <a href="https://www.flickr.com/photos/89943077@N00/2378867408">"the JavaScript Code" by Dmitry Baranovskiy</a>, CC BY 2.0.</p>
+
+    <h2>Who this applies to</h2>
+    <p>Any site built as a single-page app, or built on a framework that ships an empty shell and fills it in client-side, is exposed. So is any conventional site that loads one important piece client-side — a chat widget that holds the phone number, a JavaScript-injected address block, a tabbed services section, a reviews carousel pulled in from a third party. You do not need a fully client-rendered site to have a problem. You need one answer-critical element that only exists after a script runs.</p>
+    <p>Sites that are entirely server-rendered — most WordPress installs, most static sites, most hosted builders that publish flat HTML — are largely unaffected, though third-party widgets can still punch a hole in an otherwise fine page.</p>
+
+    <h2>How we'd evaluate it</h2>
+    <p>The check is mechanical. Fetch the page twice: once in a headless browser with JavaScript running, once as a plain HTTP request with no JavaScript at all, then compare what is present in each. The second fetch approximates what a non-rendering crawler receives. Anything that appears in the first and not the second is content the AI engines cannot see on a direct crawl.</p>
+    <p>You can do a rough version yourself in about a minute. Open your homepage in Chrome and choose View Page Source, not Inspect. View Page Source shows the raw HTML your server sent. Search it for your phone number, your street address, your headline, and a sentence from the middle of your main copy. If those strings are missing, they were injected by JavaScript.</p>
+
+    <h2>Available options</h2>
+    <ul>
+      <li><strong>Move the specific elements server-side.</strong> Usually the smallest fix. The phone number, address, headings, body copy, navigation links, and JSON-LD structured data need to exist in the HTML your server sends, not be written in later.</li>
+      <li><strong>Pre-render or server-render the whole page.</strong> Appropriate when the site is a genuine single-page app and the gap is not confined to a few elements.</li>
+      <li><strong>Keep JavaScript for enhancement only.</strong> Interactive maps, live chat, filters, and animations are fine as client-side features, as long as nothing an AI engine needs to describe your business lives exclusively inside them.</li>
+    </ul>
+
+    <h2>Benefits, limitations, and tradeoffs</h2>
+    <p>The benefit of fixing this is unusually concrete for AI visibility work: it moves content from invisible to visible on a direct crawl, and you can verify the fix the same way you found the problem. It also helps human visitors and traditional search, since server-rendered pages load faster.</p>
+    <p>The limitation is that this is necessary, not sufficient. Being readable does not mean being cited. An engine still has to decide your business is worth naming, and that depends on corroboration across your listings, reviews, and third-party mentions — none of which a rendering fix touches. There is also a real cost: on a framework-heavy site, moving to server rendering is development work, and on a small brochure site it may be wildly disproportionate to the two elements actually at risk. Fix the elements first and measure before rebuilding anything.</p>
+
+    <h2>What we know</h2>
+    <p>The Vercel and MERJ dataset is the clearest evidence available, and it is large — GPTBot generated 569 million requests across Vercel's network in the month studied, and ClaudeBot 370 million, together roughly 20% of Googlebot's 4.5 billion (Zecchini et al., 2024). Their conclusion was consistent across both Next.js and non-Next.js stacks: content included in the initial HTML response may be indexed; client-rendered content cannot be.</p>
+    <p>How often this actually bites small businesses is less settled. A 2026 preprint captured 405 North American small-business and B2B sites twice each — once rendered, once as a raw GPTBot-agent fetch — and found that 25.0% of the 368 analyzable sites (95% CI 20.8–29.7) had at least one answer-critical element present in the rendered page but absent from the raw fetch, and 14.7% (95% CI 11.4–18.7) had contact information that was invisible without rendering (Gutierrez, 2026). That is a non-representative sample of homepages by a single author, published as a working paper rather than peer-reviewed work, so treat the figures as directional. The direction is worth knowing anyway: roughly one site in four had something an AI engine could not read.</p>
+    <p>One caveat on the crawler list. OpenAI runs several agents for different purposes — OAI-SearchBot for search results, GPTBot for model training, ChatGPT-User for fetches a user triggers in a conversation — and permits site owners to allow or block each independently (OpenAI, n.d.). Their behavior can change without notice, and Google's Gemini already renders JavaScript because it inherits Googlebot's infrastructure. This is a snapshot of how these systems behave now, not a permanent property of them.</p>
+
+    <h2>Next steps</h2>
+    <p>Run View Page Source on your homepage and your two most important service pages today, and search for your phone number and a sentence of body copy. If they are there, this is not your bottleneck and you can stop. If they are not, write down exactly which elements are missing and bring that list to whoever maintains your site — it is a far more actionable request than asking for the site to be made "AI-friendly."</p>
+
+    <h2>Orlando considerations</h2>
+    <p>Central Florida practices and service businesses lean heavily on booking widgets, chat tools, and review carousels from third-party vendors, often bolted onto an otherwise ordinary site. Those are exactly the components that tend to carry the phone number or the location block, and exactly the ones that render client-side. In a market this dense — several similar med spas, dental practices, or law firms within a few miles — losing your contact details on a direct crawl hands the slot to a competitor whose details were sitting in plain HTML.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>How do I check whether my content is in the raw HTML?</summary>
+      <p>In Chrome, use View Page Source rather than Inspect. View Page Source shows the HTML your server sent before any JavaScript ran, which is roughly what a non-rendering crawler receives. Inspect shows the rendered DOM after JavaScript, which is what your browser built. If your phone number, address, or main body copy appears in Inspect but not in View Page Source, a non-rendering crawler will not see it on a direct fetch.</p>
+    </details>
+    <details>
+      <summary>Does this mean I have to rebuild my website?</summary>
+      <p>Usually not. Most sites that fail this check fail on specific elements — a chat-widget phone number, a JavaScript-injected address block, a tabbed services section — rather than the whole page. Moving those few items into the server-rendered HTML is normally a much smaller job than a rebuild.</p>
+    </details>
+    <details>
+      <summary>Is Google affected the same way?</summary>
+      <p>No. Google Search runs JavaScript with an evergreen version of Chromium, and Gemini uses the same infrastructure. That is why a site can rank normally in Google and still be largely invisible to ChatGPT, Claude, or Perplexity, which fetch raw HTML instead.</p>
+    </details>
+    <details>
+      <summary>Do hosted website builders handle this better or worse than a custom build?</summary>
+      <p>In one 2026 preprint study of 368 small-business sites, sites on builders that server-render by default (Wix and Webflow, grouped) were missing answer-critical content from the raw fetch 4.0% of the time, versus 28.3% for all other platforms. That is descriptive of one non-representative sample, not a rule, but it cuts against the assumption that a custom build is automatically safer here.</p>
+    </details>
+
+    <h2>References</h2>
+    <p>Google Search Central. (2026, March 4). <em>Understand the JavaScript SEO basics</em>. Google for Developers. <a href="https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics">https://developers.google.com/search/docs/crawling-indexing/javascript/javascript-seo-basics</a></p>
+    <p>Gutierrez, J. R. (2026). <em>AI crawler visibility and JavaScript rendering gaps in small business websites: How much of a small business website do non-rendering AI crawlers actually see?</em> SSRN. <a href="https://ssrn.com/abstract=6915818">https://ssrn.com/abstract=6915818</a></p>
+    <p>OpenAI. (n.d.). <em>Overview of OpenAI crawlers</em>. OpenAI Developers. <a href="https://developers.openai.com/api/docs/bots">https://developers.openai.com/api/docs/bots</a></p>
+    <p>Zecchini, G., Moore, A. A., Ubl, M., &amp; Siddle, R. (2024, December 17). <em>The rise of the AI crawler</em>. Vercel. <a href="https://vercel.com/blog/the-rise-of-the-ai-crawler">https://vercel.com/blog/the-rise-of-the-ai-crawler</a></p>
+
+    <div class="disclaimer">
+      This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. ChatGPT, Claude, Perplexity, Google AI, and similar tools are operated by third parties outside AnswerFoundry's control, and their crawling and rendering behavior changes without notice. Results vary by business, market, and competition.
+    </div>
+
+    <p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+    <p class="reviewed">Last updated: August 30, 2026</p>
+
+    <p style="margin-top:28px;color:var(--slate)">If View Page Source came back missing the things that matter, that's a concrete, fixable gap — and it's one of the first things an AI visibility audit checks.</p>
+  </div>
+</article>
+
+<section id="main" class="final">
+  <div class="wrap">
+    <h2>Find out what AI says about your business.</h2>
+    <p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+    <a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
