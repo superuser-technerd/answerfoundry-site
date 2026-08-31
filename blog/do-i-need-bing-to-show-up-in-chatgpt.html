@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Do I Need to Show Up in Bing to Show Up in ChatGPT? | AnswerFoundry</title>
+<meta name="description" content="ChatGPT search launched on Microsoft's infrastructure, but OpenAI now runs its own crawler and its own index. What that changes for your business, and where Bing still decides whether AI recommends you.">
+<meta property="og:title" content="Do I Need to Show Up in Bing to Show Up in ChatGPT?">
+<meta property="og:description" content="ChatGPT now runs its own web index rather than borrowing Bing's. Here's what that changes for your business.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/do-i-need-bing-to-show-up-in-chatgpt.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Do I Need to Show Up in Bing to Show Up in ChatGPT?">
+<meta name="twitter:description" content="ChatGPT now runs its own web index rather than borrowing Bing's. Here's what that changes for your business.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/do-i-need-bing-to-show-up-in-chatgpt.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Do I need to show up in Bing to show up in ChatGPT?",
+  "description": "ChatGPT search launched on Microsoft's infrastructure, but OpenAI now runs its own crawler and its own index. What that changes for your business, and where Bing still decides whether AI recommends you.",
+  "datePublished": "2026-08-31",
+  "dateModified": "2026-08-31",
+  "author": {
+    "@type": "Person",
+    "name": "Kenny Chantasi",
+    "jobTitle": "DO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AnswerFoundry LLC",
+    "url": "https://answerfoundry.ai/"
+  },
+  "mainEntityOfPage": "https://answerfoundry.ai/blog/do-i-need-bing-to-show-up-in-chatgpt.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://answerfoundry.ai/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://answerfoundry.ai/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Bing and ChatGPT visibility", "item": "https://answerfoundry.ai/blog/do-i-need-bing-to-show-up-in-chatgpt.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is the advice to focus on Bing simply out of date?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Partly. It was reasonable guidance when ChatGPT search launched on Microsoft infrastructure. As of 2026, a RESONEO study of 1,200 ChatGPT answers found that only 1.5% of the URLs returned by OpenAI's own retrieval pipeline also appeared in Bing's top 20 for the same queries, which is hard to reconcile with the idea that Bing is supplying those results. Bing still decides visibility in Microsoft Copilot and in AI summaries inside Bing, so it has not stopped mattering. It has stopped being the single gateway."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is OAI-SearchBot and do I need to allow it?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "OAI-SearchBot is the OpenAI crawler that builds and refreshes the index behind ChatGPT's search results and citations. OpenAI states that to make a website eligible for inclusion in those results, you need to allow OAI-SearchBot to crawl the site and confirm that your host or CDN allows traffic from OpenAI's published searchbot IP addresses. It is separate from GPTBot, which is used for model training, so you can allow one and disallow the other."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does submitting my site to Bing Webmaster Tools help with ChatGPT?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not directly, on the current evidence. It helps with Microsoft Copilot and AI summaries in Bing, and since February 2026 Bing Webmaster Tools has included an AI Performance report showing which of your URLs get cited in those answers. That is useful measurement you cannot get anywhere else, but it is measurement of Microsoft's surfaces, not OpenAI's."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How often does ChatGPT recrawl my pages?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "The RESONEO research describes a shared reading cache holding full copies of pages ChatGPT has fetched, considered fresh for roughly 30 minutes and refreshed in the background afterward. The practical implication is that refresh frequency is driven by how often users ask about a page, not by a fixed schedule. Pages nobody asks about can sit on an old copy for a long time."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Bing and ChatGPT visibility</p>
+  <p class="post-date">Published August 31, 2026</p>
+  <h1>Do I need to show up in Bing to show up in ChatGPT?</h1>
+
+  <p class="lede">Not anymore, or at least not the way the advice is usually given. ChatGPT search launched on Microsoft's infrastructure, and "get into Bing" became standard guidance because of it. OpenAI now runs its own crawler and its own index, and the evidence says that index is what feeds ChatGPT's citations. Bing still decides whether Microsoft Copilot recommends you — which is a different question with a different answer.</p>
+
+  <div class="prose">
+    <h2>What this means</h2>
+    <p>There are two separate systems here, and they got collapsed into one piece of advice. Microsoft crawls the web with Bingbot and builds the Bing index. That index sits behind Bing's results, behind the AI-generated summaries inside Bing, and behind Microsoft Copilot. OpenAI crawls the web with its own bots and builds its own index. That index sits behind ChatGPT's search results and the citations attached to them.</p>
+    <p>OpenAI is explicit about the mechanism on its own side. To make a site eligible for inclusion in ChatGPT's search results, OpenAI says you have to allow OAI-SearchBot to crawl it and confirm that your host or CDN permits traffic from OpenAI's published searchbot IP addresses (OpenAI, n.d.-b). Nothing in that instruction routes through Bing. OpenAI does say that ChatGPT search sometimes partners with other search providers, and names Microsoft among the providers whose privacy policies users may want to review — but partnering on some queries is not the same as borrowing an index for all of them.</p>
+
+    <img src="/blog/images/do-i-need-bing-to-show-up-in-chatgpt.jpg" alt="Side-by-side comparison of two indexes: OpenAI's own index, built by OAI-SearchBot and powering ChatGPT citations, and Microsoft's Bing index, powering Copilot and AI summaries in Bing, with a note that only 1.5 percent of URLs overlapped in one 2026 study." style="width:100%;border-radius:10px;margin:24px 0" loading="lazy">
+
+    <h2>Who this applies to</h2>
+    <p>Anyone who was told to prioritize Bing specifically because it was the on-ramp to ChatGPT. That was reasonable advice in 2024 and 2025. It is now at best incomplete, and it can send a small marketing budget to the wrong place — chasing a Bing ranking for a query ChatGPT was never going to answer from Bing.</p>
+    <p>It applies differently if your customers use Copilot. Copilot is built into Windows, Edge, and Microsoft 365, so in industries where the workday runs on Microsoft software, Bing visibility is not a proxy for anything. It is the thing itself.</p>
+
+    <h2>How we'd evaluate it</h2>
+    <p>Test the surfaces separately, because they can disagree. Ask the same set of buying questions in ChatGPT and in Copilot, log which sources each one cites, and compare. If your business shows up in one and not the other, that gap tells you which index has a problem with you. Then check the plumbing on each side: whether OAI-SearchBot is allowed in robots.txt and not blocked at the firewall or CDN, and whether your site is verified in Bing Webmaster Tools and actually indexed there.</p>
+
+    <h2>Available options</h2>
+    <ul>
+      <li><strong>Allow OAI-SearchBot explicitly.</strong> This is the ChatGPT-side prerequisite. It is separate from GPTBot, which OpenAI uses for model training, so you can allow search crawling while disallowing training crawling if that is your preference (OpenAI, n.d.-a).</li>
+      <li><strong>Check for silent blocks above robots.txt.</strong> A permissive robots.txt does not help if a CDN bot-management rule or firewall is returning 403s to the crawler. This is a common and invisible failure.</li>
+      <li><strong>Claim Bing Webmaster Tools and Bing Places.</strong> Free, quick, and the only place you get Microsoft-side citation data. Microsoft also points local businesses to Bing Places specifically so address, hours, and contact details stay eligible for inclusion in AI-generated answers (Madhavan et al., 2026).</li>
+      <li><strong>Write pages that answer one question cleanly.</strong> This is the part that carries across both indexes, and the only part that survives another architecture change.</li>
+    </ul>
+
+    <h2>Benefits, limitations, and tradeoffs</h2>
+    <p>Getting this right mostly saves you from wasted effort. Crawler access is a one-time configuration change, and Bing Webmaster Tools is a free account. Neither is expensive. The cost of getting it wrong is subtler: you spend months optimizing for a Bing ranking believing it will move ChatGPT, and it does not.</p>
+    <p>The limitation is that access is not the same as citation. Allowing OAI-SearchBot makes you eligible, nothing more — OpenAI is direct that it ranks results using multiple factors and that placement is not guaranteed. Whether an engine actually names your business still depends on whether it can corroborate what you claim against reviews, listings, and third-party mentions, none of which a crawler setting affects.</p>
+
+    <h2>What we know</h2>
+    <p>The strongest public evidence comes from a July 2026 study by RESONEO, which captured and analyzed 1,200 ChatGPT answers, 88,000 search results, and 26,900 distinct pages by recording the raw data stream ChatGPT sends to the browser (de Segonzac, 2026). Their finding on the Bing question is specific: only 1.5% of the URLs returned by OpenAI's own retrieval pipeline also appeared in Bing's top 20 for the same fan-out queries, no snippet matched a Bing snippet, and 24% of the titles exceeded Bing's 75-character cap, with the longest running 289 characters. Their conclusion was that OpenAI has its own web index and Bing does not supply it.</p>
+    <p>The same research describes two further layers worth knowing about: a cache holding full copies of pages ChatGPT has already fetched, considered fresh for about 30 minutes and refreshed in the background after that, and a small number of pages opened live during an answer. Because that cache is keyed by URL and shared across all users, how often your page gets refetched is driven mainly by how often people ask about it. Treat these as findings from one team's instrumentation of a system that changes without notice, not as documented behavior.</p>
+    <p>On the Microsoft side the evidence is first-party. In February 2026 Microsoft launched AI Performance in Bing Webmaster Tools, a report showing how often a site is cited in AI-generated answers across Microsoft Copilot, AI summaries in Bing, and select partner integrations, with per-URL citation counts and the grounding queries the AI used to retrieve them (Madhavan et al., 2026). Microsoft's own framing is that this is an early step toward generative engine optimization tooling. It is also the clearest signal that Bing's index continues to matter — for Microsoft's surfaces.</p>
+
+    <h2>Next steps</h2>
+    <p>Two things this week. First, confirm OAI-SearchBot is not blocked, in robots.txt and at your CDN or firewall. Second, claim Bing Webmaster Tools if you have not, and open the AI Performance report to see whether Microsoft's AI systems are citing you at all. Together those take under an hour, and they tell you which of the two indexes, if either, is the actual bottleneck.</p>
+
+    <h2>Orlando considerations</h2>
+    <p>Central Florida service businesses tend to sit behind managed hosting and CDN bot filters that were tuned to stop scrapers, and those filters do not reliably distinguish a search crawler from a content scraper. We see legitimate AI search crawlers blocked at that layer more often than in robots.txt. On the Microsoft side, many of Orlando's larger employers — hospital systems, defense and simulation firms, the theme park operators and their vendor networks — run on Microsoft 365, which means a meaningful share of local B2B research happens inside Copilot. If you sell into those organizations, Bing Places and Bing Webmaster Tools are not a legacy checkbox.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Is the advice to focus on Bing simply out of date?</summary>
+      <p>Partly. It was reasonable guidance when ChatGPT search launched on Microsoft infrastructure. As of 2026, a RESONEO study of 1,200 ChatGPT answers found that only 1.5% of the URLs returned by OpenAI's own retrieval pipeline also appeared in Bing's top 20 for the same queries, which is hard to reconcile with the idea that Bing is supplying those results. Bing still decides visibility in Microsoft Copilot and in AI summaries inside Bing, so it has not stopped mattering. It has stopped being the single gateway.</p>
+    </details>
+    <details>
+      <summary>What is OAI-SearchBot and do I need to allow it?</summary>
+      <p>OAI-SearchBot is the OpenAI crawler that builds and refreshes the index behind ChatGPT's search results and citations. OpenAI states that to make a website eligible for inclusion in those results, you need to allow OAI-SearchBot to crawl the site and confirm that your host or CDN allows traffic from OpenAI's published searchbot IP addresses. It is separate from GPTBot, which is used for model training, so you can allow one and disallow the other.</p>
+    </details>
+    <details>
+      <summary>Does submitting my site to Bing Webmaster Tools help with ChatGPT?</summary>
+      <p>Not directly, on the current evidence. It helps with Microsoft Copilot and AI summaries in Bing, and since February 2026 Bing Webmaster Tools has included an AI Performance report showing which of your URLs get cited in those answers. That is useful measurement you cannot get anywhere else, but it is measurement of Microsoft's surfaces, not OpenAI's.</p>
+    </details>
+    <details>
+      <summary>How often does ChatGPT recrawl my pages?</summary>
+      <p>The RESONEO research describes a shared reading cache holding full copies of pages ChatGPT has fetched, considered fresh for roughly 30 minutes and refreshed in the background afterward. The practical implication is that refresh frequency is driven by how often users ask about a page, not by a fixed schedule. Pages nobody asks about can sit on an old copy for a long time.</p>
+    </details>
+
+    <h2>References</h2>
+    <p>de Segonzac, O. (2026, August 17). <em>Inside ChatGPT's retrieval stack: The index, cache, and pages it actually reads</em>. Search Engine Land. <a href="https://searchengineland.com/chatgpt-retrieval-stack-index-cache-pages-485036">https://searchengineland.com/chatgpt-retrieval-stack-index-cache-pages-485036</a></p>
+    <p>Madhavan, K., Merchant, M., Canel, F., &amp; Nigam, S. (2026, February 10). <em>Introducing AI Performance in Bing Webmaster Tools public preview</em>. Bing Webmaster Blog. <a href="https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview">https://blogs.bing.com/webmaster/February-2026/Introducing-AI-Performance-in-Bing-Webmaster-Tools-Public-Preview</a></p>
+    <p>OpenAI. (n.d.-a). <em>Overview of OpenAI crawlers</em>. OpenAI Developers. <a href="https://developers.openai.com/api/docs/bots">https://developers.openai.com/api/docs/bots</a></p>
+    <p>OpenAI. (n.d.-b). <em>Searching the web with ChatGPT</em>. OpenAI Help Center. <a href="https://help.openai.com/en/articles/9237897-chatgpt-search">https://help.openai.com/en/articles/9237897-chatgpt-search</a></p>
+
+    <div class="disclaimer">
+      This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. ChatGPT, Copilot, Perplexity, Google AI, and similar tools are operated by third parties outside AnswerFoundry's control, and their retrieval architecture and crawling behavior change without notice. Results vary by business, market, and competition.
+    </div>
+
+    <p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+    <p class="reviewed">Last updated: August 31, 2026</p>
+
+    <p style="margin-top:28px;color:var(--slate)">If you don't know whether ChatGPT and Copilot can reach your site at all, that's the first thing an AI visibility audit measures.</p>
+  </div>
+</article>
+
+<section id="main" class="final">
+  <div class="wrap">
+    <h2>Find out what AI says about your business.</h2>
+    <p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+    <a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
