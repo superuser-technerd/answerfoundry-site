@@ -4,7 +4,7 @@
 
 AnswerFoundry is industry-general. Clients include law firms, home services and contracting companies, financial advisers and accounting practices, real estate brokerages and property managers, healthcare and aesthetics practices, and other considered-purchase service businesses.
 
-Founder Kenny Chantasi is a business owner who found that his own company scored 85/100 on a conventional SEO audit yet was named "not once" when he asked AI engines directly which local providers they would recommend. He closed the underlying structured-data and entity-trust gaps for his own business, then built AnswerFoundry to do the same for others.
+Founder Kenny Chantasi is a business owner who found that his own company scored 85/100 on a conventional SEO audit yet was named "not once" when he asked AI engines directly which local providers they would recommend. He began documenting and correcting the underlying structured-data and entity-trust gaps, then built AnswerFoundry to do the same for others. The founder case study remains in progress, with unfinished results still pending.
 
 AnswerFoundry provides marketing and AI-visibility consulting only. It does not treat patients or give medical advice, and it does not give legal, financial, investment, tax, or real-estate advice. It is not a law firm, registered investment adviser, accounting firm, or licensed real-estate brokerage.
 
@@ -65,7 +65,7 @@ The full Foundry Audit fee paid is credited toward the first month if an ongoing
 
 ## Articles
 
-Index: [Blog](https://answerfoundry.ai/blog/). 9 articles, newest first.
+Index: [Blog](https://answerfoundry.ai/blog/). 34 articles as of September 2, 2026. Selected foundational articles:
 
 - [AI Visibility vs. SEO: What's the Difference?](https://answerfoundry.ai/blog/ai-visibility-vs-seo.html): AI visibility and SEO are related but distinct disciplines. Here's where they overlap, where they diverge, and why a business can be strong in one and weak in the other.
 - [How Do Online Reviews Affect Whether AI Recommends Your Business?](https://answerfoundry.ai/blog/how-online-reviews-affect-ai-recommendations.html): AI engines don't just total your star rating. Here's what current research says about how ChatGPT, Perplexity, and Google AI actually weigh reviews.
@@ -98,6 +98,8 @@ Index: [Blog](https://answerfoundry.ai/blog/). 9 articles, newest first.
 
 - Website: https://answerfoundry.ai/
 - Email: hello@answerfoundry.ai
+- LinkedIn: https://www.linkedin.com/company/answerfoundry
+- Facebook: https://www.facebook.com/Answerfoundry/
 - Phone: (321) 321-9420
 - Mailing address: 2445 S Hiawassee Rd, PMB 1021, Orlando, FL 32835-6347
 - Service area: Orlando and Central Florida, and remote engagements across Florida
