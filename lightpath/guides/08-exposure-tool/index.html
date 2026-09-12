@@ -3,20 +3,15 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Lightpath Support</title>
-<meta name="description" content="Help, FAQ and contact for the Lightpath iOS app — sun, moon and Milky Way photo planning.">
+<title>The Exposure tool — meter once, then shoot the settings you actually want | Lightpath</title>
+<meta name="description" content="Cameras meter well and choose settings badly. Auto mode will hand you f/8 at 1/125 and ISO 100 for a bright scene, which is technically correct and creatively useless if you wanted f/2.8 for a soft background or a two-second exposure to smooth a waterfall. The Exposure tool exists so you can take the camera&#x27;s *measurement* and throw away its *decision*.">
 <meta name="robots" content="index,follow">
-<meta property="og:title" content="Lightpath Support">
-<meta property="og:description" content="Help, FAQ and contact for the Lightpath iOS app — sun, moon and Milky Way photo planning.">
-<meta property="og:type" content="website">
-<meta property="og:url" content="https://answerfoundry.ai/lightpath/support/">
-<meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Lightpath Support">
-<meta name="twitter:description" content="Help, FAQ and contact for the Lightpath iOS app — sun, moon and Milky Way photo planning.">
-<link rel="canonical" href="https://answerfoundry.ai/lightpath/support/">
+<meta property="og:title" content="The Exposure tool — meter once, then shoot the settings you actually want | Lightpath">
+<meta property="og:description" content="Cameras meter well and choose settings badly. Auto mode will hand you f/8 at 1/125 and ISO 100 for a bright scene, which is technically correct and creatively useless if you wanted f/2.8 for a soft background or a two-second exposure to smooth a waterfall. The Exposure tool exists so you can take the camera&#x27;s *measurement* and throw away its *decision*.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/lightpath/guides/08-exposure-tool/">
+<link rel="canonical" href="https://answerfoundry.ai/lightpath/guides/08-exposure-tool/">
 <link rel="icon" type="image/x-icon" href="/favicon.ico">
-<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="apple-touch-icon" href="/apple-touch-icon.png">
 <meta name="theme-color" content="#0a1526">
 <style>
@@ -131,6 +126,9 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 .optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
 @media (forced-colors:active){.card-ico{color:CanvasText}}
 </style>
+<style>
+.guide h2{margin-top:36px}.guide h3{margin-top:22px;font-size:1.1rem}.guide table{border-collapse:collapse;margin:14px 0;width:100%}.guide th,.guide td{border:1px solid var(--line);padding:8px 10px;text-align:left;font-size:.95rem;vertical-align:top}.guide th{background:var(--fog)}.guide pre{background:var(--fog);border:1px solid var(--line);padding:12px 14px;overflow-x:auto;font-size:.95rem}.guide ul,.guide ol{margin:10px 0 14px 22px}.guide li{margin:4px 0}.guide .refs{border-top:1px solid var(--line);margin-top:34px;padding-top:6px}.guide-list{list-style:none;margin:0;padding:0}.guide-list li{border-bottom:1px solid var(--line);padding:16px 0}.guide-list a{font-weight:700;color:var(--ink);text-decoration:none;font-size:1.15rem}.guide-list a:hover{color:var(--forge)}.guide-list p{color:var(--slate);margin:6px 0 0}.guide-list .n{color:var(--forge);font-weight:800;margin-right:8px}
+</style>
 </head>
 <body>
 <a class="skip" href="#main">Skip to main content</a>
@@ -151,58 +149,31 @@ a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,te
 
 <header class="hero" id="main" style="padding:64px 0 40px">
   <div class="wrap">
-    <span class="kicker">Lightpath</span>
-    <h1>Lightpath Support</h1>
-    <p class="sub">Help and answers for the Lightpath iOS app. For anything not covered here, email and you will get a reply.</p>
+    <span class="kicker">Lightpath guides</span>
+    <h1>The Exposure tool — meter once, then shoot the settings you actually want</h1>
+    <p class="sub">Cameras meter well and choose settings badly. Auto mode will hand you f/8 at 1/125 and ISO 100 for a bright scene, which is technically correct and creatively useless if you wanted f/2.8 for a soft background or a two-second exposure to smooth a waterfall. The Exposure tool exists so you can take the camera&#x27;s *measurement* and throw away its *decision*.</p>
   </div>
 </header>
 
 <section>
-  <div class="wrap legal">
-<div class="callout">
-    <p><strong>Need help with Lightpath?</strong> Email <a href="mailto:kenny@answerfoundry.ai">kenny@answerfoundry.ai</a>. Include your iPhone model and iOS version and you&rsquo;ll get a reply.</p>
-  </div>
-
-  <h2 id="what">What Lightpath does</h2>
-  <p>Lightpath is a photo-planning app for natural light. Shot Score rates conditions at your spot right now and tells you when the next good window opens. It also shows a 24-hour light timeline, a map planner for sun, moon and Milky Way directions, an AR sky view, saved recipes with return alerts, and a set of photography calculators.</p>
-
-  <h2 id="faq">Common questions</h2>
-
-  <h3>The Shot Score says cloud cover is unavailable</h3>
-  <p>Cloud cover comes from Apple Weather and needs a network connection the first time it loads for a location. Sun, moon and Milky Way times are computed on device and work offline.</p>
-
-  <h3>Why does the app ask for my location?</h3>
-  <p>To compute sun, moon and Milky Way positions where you are standing. Your location never leaves your device. You can decline and pick a saved spot instead.</p>
-
-  <h3>Why does AR sky view need the camera?</h3>
-  <p>It draws sun, moon and Milky Way markers over a live camera view so you can see where they will be in your actual scene. Nothing is recorded or transmitted.</p>
-
-  <h3>Does Lightpath work offline?</h3>
-  <p>Yes. Every calculator and every sun and moon time runs on your phone. Only cloud cover and air quality need a connection.</p>
-
-  <h3>How do I report a bug or request a feature?</h3>
-  <p>Email <a href="mailto:kenny@answerfoundry.ai">kenny@answerfoundry.ai</a> with what you expected and what happened.</p>
-
-  <h2 id="guides">Field guides</h2>
-  <p>Ten how-to guides on getting the most out of the app, each with references: <a href="/lightpath/guides/">Lightpath field guides</a>.</p>
-  <ul>
-    <li><a href="/lightpath/guides/01-shot-score/">Reading the Shot Score — and knowing when to trust it</a></li>
-    <li><a href="/lightpath/guides/02-light-timeline-twilights/">Golden hour, blue hour and the three twilights — using the Light timeline</a></li>
-    <li><a href="/lightpath/guides/03-planner-alignments-return-alerts/">Lining up the sun or moon with a landmark — the Planner and Return Alerts</a></li>
-    <li><a href="/lightpath/guides/04-ar-sky-view-field-of-view/">Composing before you arrive — AR sky view and the Field of view tool</a></li>
-    <li><a href="/lightpath/guides/05-milky-way-core/">Shooting the Milky Way core — season, core window, moon and the Stars tool</a></li>
-    <li><a href="/lightpath/guides/06-moon/">The moon — when it helps, when it hurts, and how to shoot it</a></li>
-    <li><a href="/lightpath/guides/07-clouds-and-air/">Clouds and air — reading the forecast for light, not for rain</a></li>
-    <li><a href="/lightpath/guides/08-exposure-tool/">The Exposure tool — meter once, then shoot the settings you actually want</a></li>
-    <li><a href="/lightpath/guides/09-depth-of-field-hyperfocal/">Depth of field and hyperfocal distance — getting the whole landscape sharp</a></li>
-    <li><a href="/lightpath/guides/10-time-lapse/">Planning a time-lapse — interval, frames and clip length</a></li>
-  </ul>
-
-  <h2 id="privacy">Privacy</h2>
-  <p>Lightpath collects nothing. See the <a href="/lightpath/privacy/">Lightpath privacy policy</a>.</p>
-
-  <h2 id="contact">Contact</h2>
-  <p><a href="mailto:kenny@answerfoundry.ai">kenny@answerfoundry.ai</a></p>
+  <div class="wrap legal guide">
+<h2>The idea: exposure value</h2>
+<p>Every combination of aperture, shutter and ISO that produces the same brightness shares one number, the <strong>exposure value (EV)</strong>. Lightpath computes it from the metered settings:</p>
+<pre>EV₁₀₀ = log₂(N² ÷ t) − log₂(ISO ÷ 100)</pre>
+<p>where N is the f-number and t the shutter time in seconds. Open the aperture one stop (say f/8 to f/5.6) and you must halve the shutter time to keep the same EV. Double the ISO and you halve it again. Add a 3-stop ND filter and the shutter gets eight times longer. The tool does this arithmetic and hands you a shutter speed on the standard scale.</p>
+<h2>How to use it</h2>
+<ol><li>Put the camera in aperture priority or program mode and half-press on your scene. Note what it chose — for example f/8, 1/125, ISO 100.</li><li>Open <strong>Tools › Exposure</strong> and enter those three under <em>Metered exposure</em>.</li><li>Under <em>I want to shoot at</em>, set the aperture and ISO you actually want, and the ND filter if you are using one.</li><li>Read <em>Set your shutter to</em>. The line beneath tells you whether it is hand-holdable and the scene's EV.</li></ol>
+<p>Example: metered f/8 · 1/125 · ISO 100 (EV 13). You want f/2.8 for the background. Three stops wider means eight times shorter: <strong>1/1000</strong>. Now add a 6-stop ND to blur a stream at f/8: 1/125 becomes about <strong>1/2 second</strong>.</p>
+<h2>Why not just trust the camera in manual?</h2>
+<p>You can — this is the same maths — but the tool is faster than counting stops in your head under a fading sky, and it removes the mental arithmetic of ND filters, which are labelled inconsistently (ND8, ND 0.9 and "3-stop" are all the same filter). It also flags when the result is slower than you can hand-hold, which is the moment to reach for the tripod.</p>
+<h2>Field tips</h2>
+<ul><li>Meter with the composition you will shoot; a bright sky in the top third changes the reading.</li><li>Sunsets shift a stop or more in five minutes. Meter, compute, shoot, and re-meter.</li><li>At golden hour, deliberately under-expose by a third to two-thirds of a stop to protect highlights and deepen colour; you can lift shadows later, but you cannot recover a blown sun.</li><li>Treat the hand-holdable flag as a prompt, not a promise: stabilisation buys two to four stops over an unstabilised lens, and a tripod removes the limit entirely.</li></ul>
+<h2 id="references" class="refs">References</h2>
+<p><strong>Primary</strong></p>
+<ul><li>Wikipedia. <em>Exposure value.</em> <a href="https://en.wikipedia.org/wiki/Exposure_value" rel="noopener">https://en.wikipedia.org/wiki/Exposure_value</a> — the definition of EV, the EV₁₀₀ convention and the tables of equivalent exposures the tool reproduces.</li></ul>
+<p><strong>Supporting</strong></p>
+<ul><li>Cambridge in Colour. <em>Camera Exposure: Aperture, ISO &amp; Shutter Speed.</em> <a href="https://www.cambridgeincolour.com/tutorials/camera-exposure.htm" rel="noopener">https://www.cambridgeincolour.com/tutorials/camera-exposure.htm</a></li><li>Parker, F. <em>The Ultimate Exposure Computer.</em> <a href="https://www.fredparker.com/ultexp1.htm" rel="noopener">https://www.fredparker.com/ultexp1.htm</a> — the classic EV-by-scene reference; useful for sanity-checking a meter reading.</li><li>Wikipedia. <em>Neutral-density filter.</em> <a href="https://en.wikipedia.org/wiki/Neutral-density_filter" rel="noopener">https://en.wikipedia.org/wiki/Neutral-density_filter</a> — the ND naming systems and their stop equivalents.</li></ul>
+<p style="margin-top:34px"><a href="/lightpath/guides/">&larr; All Lightpath guides</a> &middot; <a href="/lightpath/support/">Support</a></p>
   </div>
 </section>
 
