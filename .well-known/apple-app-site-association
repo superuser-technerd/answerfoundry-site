@@ -1,0 +1,14 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appIDs": ["K6ZBP6HDG3.com.kchantasi.lightpath"],
+        "components": [
+          { "/": "/lightpath/plan/*", "comment": "Shared Lightpath plans open in the app" },
+          { "/": "/lightpath/plan", "comment": "Same, without the trailing slash" }
+        ]
+      }
+    ]
+  }
+}

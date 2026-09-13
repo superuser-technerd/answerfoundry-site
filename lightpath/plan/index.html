@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lightpath plan</title>
+<meta name="description" content="A photo plan shared from Lightpath: where to stand, when the light is right, and the camera settings to start from.">
+<meta name="robots" content="noindex,follow">
+<meta property="og:title" content="A Lightpath plan">
+<meta property="og:description" content="Where to stand, when the light is right, and the settings to start from. Open it in Lightpath to save it or put it on the map.">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<meta name="theme-color" content="#0a1526">
+<style>
+:root{--ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;--paper:#fff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;--steel:#5b82a8;--steel-dk:#3f5f80}
+*{margin:0;padding:0;box-sizing:border-box}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--fog);line-height:1.55;min-height:100vh;display:flex;flex-direction:column}
+nav{background:rgba(255,255,255,.92);border-bottom:1px solid var(--line)}
+.nav-in{max-width:720px;margin:0 auto;padding:0 20px;height:60px;display:flex;align-items:center;justify-content:space-between}
+.logo{font-weight:800;text-decoration:none;color:var(--ink);letter-spacing:-.02em}.logo span{color:var(--forge)}
+.nav-in a.small{color:var(--slate);text-decoration:none;font-size:.9rem}
+main{max-width:720px;margin:0 auto;padding:36px 20px 60px;width:100%}
+.kicker{font-size:.75rem;letter-spacing:.14em;text-transform:uppercase;color:var(--steel-dk);font-weight:700}
+h1{font-size:clamp(1.7rem,5vw,2.4rem);letter-spacing:-.02em;line-height:1.15;margin:6px 0 22px}
+.card{background:var(--paper);border:1px solid var(--line);padding:22px}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 20px}
+.cell .k{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);font-weight:700}
+.cell .v{font-size:1.15rem;font-weight:700;margin-top:2px}
+.cell .s{font-size:.85rem;color:var(--slate)}
+.aim{margin-top:18px;padding-top:16px;border-top:1px solid var(--line)}
+.ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:24px}
+.btn{display:inline-block;padding:13px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;background:var(--steel);color:#fff}
+.btn:hover{background:var(--steel-dk)}
+.btn.ghost{background:transparent;color:var(--ink);border:1.5px solid var(--line)}
+.btn.ghost:hover{border-color:var(--mist);background:var(--fog)}
+.note{margin-top:14px;color:var(--slate);font-size:.9rem}
+.empty{color:var(--slate)}
+footer{margin-top:auto;border-top:1px solid var(--line);padding:18px 20px;text-align:center;font-size:.85rem;color:var(--mist)}
+footer a{color:var(--slate)}
+@media(max-width:480px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<nav><div class="nav-in"><a class="logo" href="/">Answer<span>Foundry</span></a><a class="small" href="/lightpath/support/">Lightpath support</a></div></nav>
+<main>
+  <div class="kicker">Lightpath plan</div>
+  <h1 id="title">A shared photo plan</h1>
+  <div class="card" id="card">
+    <p class="empty" id="empty">This link doesn't carry a plan. Ask whoever sent it to share it again from the Recipes tab in Lightpath.</p>
+    <div class="grid" id="grid" hidden>
+      <div class="cell"><div class="k">Where</div><div class="v" id="place"></div><div class="s" id="coords"></div></div>
+      <div class="cell"><div class="k">When</div><div class="v" id="when"></div><div class="s" id="kind"></div></div>
+      <div class="cell"><div class="k">Lens · aperture</div><div class="v" id="lens"></div></div>
+      <div class="cell"><div class="k">Shutter · ISO</div><div class="v" id="exposure"></div></div>
+    </div>
+    <div class="aim" id="aimWrap" hidden><div class="k" style="font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--mist);font-weight:700">Point the camera</div><div id="aim"></div><div class="s" id="align"></div></div>
+  </div>
+  <div class="ctas">
+    <a class="btn" id="open" href="#">Open in Lightpath</a>
+    <a class="btn ghost" href="https://apps.apple.com/app/id6811388615">Get Lightpath on the App Store</a>
+    <a class="btn ghost" id="maps" href="#" target="_blank" rel="noopener">See the spot on a map</a>
+  </div>
+  <p class="note">Lightpath is an iPhone app that plans photographs around natural light: sun, moon, Milky Way, clouds and air. On an iPhone with Lightpath installed this link opens straight in the app, where you can save the plan as a recipe or put it on the map.</p>
+</main>
+<footer>© <span id="yr"></span> Kenny Chantasi · <a href="/lightpath/privacy/">Privacy</a> · <a href="/lightpath/support/">Support</a> · <a href="/lightpath/guides/">Guides</a></footer>
+<script>
+(function(){
+  document.getElementById('yr').textContent = new Date().getFullYear();
+  var q = new URLSearchParams(location.search);
+  var lat = parseFloat(q.get('lat')), lon = parseFloat(q.get('lon')), t = parseInt(q.get('t'), 10);
+  var open = document.getElementById('open');
+  open.href = 'lightpath://plan?' + q.toString();
+  if (isNaN(lat) || isNaN(lon) || isNaN(t)) { document.getElementById('maps').hidden = true; return; }
+  var g = function(k, d){ var v = q.get(k); return v && v.trim() ? v : d; };
+  document.getElementById('empty').hidden = true; document.getElementById('grid').hidden = false;
+  document.getElementById('title').textContent = g('n', 'A shared photo plan');
+  document.title = g('n', 'Lightpath plan') + ' · Lightpath plan';
+  document.getElementById('place').textContent = g('p', lat.toFixed(3) + ', ' + lon.toFixed(3));
+  document.getElementById('coords').textContent = lat.toFixed(4) + ', ' + lon.toFixed(4);
+  var tz = g('tz', undefined), d = new Date(t * 1000), when;
+  try { when = d.toLocaleString(undefined, { timeZone: tz, dateStyle: 'medium', timeStyle: 'short' }); } catch (e) { when = d.toLocaleString(); }
+  document.getElementById('when').textContent = when;
+  document.getElementById('kind').textContent = g('k', '') + (tz ? ' · ' + tz.replace(/_/g, ' ') : '');
+  document.getElementById('lens').textContent = g('l', '—') + ' · f/' + g('a', '—');
+  document.getElementById('exposure').textContent = g('s', '—') + ' · ISO ' + g('i', '—');
+  var aim = g('aim', ''), ab = q.get('ab'), ae = q.get('ae'), az = q.get('az');
+  if (aim || ab) {
+    document.getElementById('aimWrap').hidden = false;
+    document.getElementById('aim').textContent = aim;
+    if (ab && ae && az) document.getElementById('align').textContent = 'Return alert: ' + ab + ' ' + ae + 's at ' + az + '°';
+  }
+  document.getElementById('maps').href = 'https://maps.apple.com/?ll=' + lat + ',' + lon + '&q=' + encodeURIComponent(g('p', 'Lightpath spot'));
+  var og = document.querySelector('meta[property="og:title"]'); if (og) og.setAttribute('content', g('n', 'A Lightpath plan') + ' · Lightpath plan');
+})();
+</script>
+</body>
+</html>

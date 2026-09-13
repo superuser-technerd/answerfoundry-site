@@ -84,3 +84,10 @@
   for = "/api/*"
   [headers.values]
     Cache-Control = "no-store"
+
+# Apple universal links for the Lightpath app: the AASA file must be served as JSON with no extension.
+[[headers]]
+  for = "/.well-known/apple-app-site-association"
+  [headers.values]
+    Content-Type = "application/json"
+    Cache-Control = "public, max-age=3600"
