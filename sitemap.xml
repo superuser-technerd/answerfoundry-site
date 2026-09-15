@@ -418,6 +418,12 @@ dateModified in each post's on-page JSON-LD. -->
 <priority>0.7</priority>
 </url>
 <url>
+<loc>https://answerfoundry.ai/blog/do-unlinked-brand-mentions-help-ai-search-visibility.html</loc>
+<lastmod>2026-09-15</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://answerfoundry.ai/blog/does-adding-statistics-and-citations-help-ai-search-visibility.html</loc>
 <lastmod>2026-09-14</lastmod>
 <changefreq>monthly</changefreq>
