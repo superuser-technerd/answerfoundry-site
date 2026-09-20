@@ -453,4 +453,10 @@ dateModified in each post's on-page JSON-LD. -->
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://answerfoundry.ai/blog/does-my-business-need-a-spanish-language-website.html</loc>
+<lastmod>2026-09-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
