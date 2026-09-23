@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What is query fan-out, and how does it affect whether AI search mentions my business? | AnswerFoundry</title>
+<meta name="description" content="Query fan-out is how Google AI Mode and AI Overviews turn one question into many related searches before answering. Here&#x27;s what that changes for local businesses, with sources.">
+<meta property="og:title" content="What is query fan-out, and how does it affect whether AI search mentions my business?">
+<meta property="og:description" content="Query fan-out is how Google AI Mode and AI Overviews turn one question into many related searches before answering. Here&#x27;s what that changes for local businesses, with sources.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/what-is-query-fan-out-ai-search.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What is query fan-out, and how does it affect whether AI search mentions my business?">
+<meta name="twitter:description" content="Query fan-out is how Google AI Mode and AI Overviews turn one question into many related searches before answering. Here&#x27;s what that changes for local businesses, with sources.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/what-is-query-fan-out-ai-search.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "What is query fan-out, and how does it affect whether AI search mentions my business?",
+ "description": "Query fan-out is how Google AI Mode and AI Overviews turn one question into many related searches before answering. Here's what that changes for local businesses, with sources.",
+ "datePublished": "2026-09-23",
+ "dateModified": "2026-09-23",
+ "author": {
+  "@type": "Person",
+  "name": "Kenny Chantasi",
+  "jobTitle": "DO"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "AnswerFoundry LLC",
+  "url": "https://answerfoundry.ai/"
+ },
+ "image": "https://answerfoundry.ai/blog/images/what-is-query-fan-out-ai-search.jpg",
+ "mainEntityOfPage": "https://answerfoundry.ai/blog/what-is-query-fan-out-ai-search.html"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://answerfoundry.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://answerfoundry.ai/blog/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "Query fan-out and AI search",
+   "item": "https://answerfoundry.ai/blog/what-is-query-fan-out-ai-search.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Is query fan-out only a Google thing?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Google coined the term for AI Mode and AI Overviews. Search Engine Land's guide reports that ChatGPT, Perplexity, and Microsoft Copilot use comparable approaches under different names, such as query rewriting or iterative retrieval (Siddiqui, n.d.)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Can I see which sub-queries Google ran for my customer's question?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Google doesn't publish the sub-queries. Google's documentation says AI Overviews and AI Mode traffic is counted within Search Console's overall Web search data, and it doesn't describe any report of the fan-out queries behind a response (Google Search Central, 2025)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Do I need special markup or an AI file to benefit from fan-out?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Google says no. There are no additional requirements to appear in AI Overviews or AI Mode, and no special schema.org structured data or AI text files are needed. Standard SEO fundamentals still apply (Google Search Central, 2025)."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Should I create a separate page for every possible sub-query?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Usually not. Search Engine Land's guide suggests pages that clearly address the related questions around a topic in one place give AI systems more reasons to reuse them (Siddiqui, n.d.). In our view, thin pages built for each variation add little."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Query fan-out and AI search</p>
+<p class="post-date">Published September 23, 2026</p>
+<h1>What is query fan-out, and how does it affect whether AI search mentions my business?</h1>
+
+<p class="lede">Short answer: query fan-out is what happens when an AI search tool takes one question and quietly runs many related searches before writing its answer. Google says both AI Overviews and AI Mode may do this. For a business owner, the practical effect is that you aren't competing for one search phrase anymore. You're competing to show up across a cluster of related questions the customer never typed.</p>
+
+<div class="prose">
+<h2>What this means</h2>
+<p>A traditional search works on the exact words someone types. AI search tools often don't. Google's documentation says AI Overviews and AI Mode "may use a 'query fan-out' technique," which it describes as issuing multiple related searches across subtopics and data sources to build a response (Google Search Central, 2025). When Google launched AI Mode broadly in the U.S., its head of Search described the same process: the system breaks a question into subtopics and issues "a multitude of queries simultaneously" on the user's behalf (Reid, 2025).</p>
+<p>The idea isn't new. A Google patent granted in 2023 describes using a trained generative model to create variants of a submitted query and use the results to produce a response (Alakuijala et al., 2023). "Query fan-out" is Google's name for it. Other platforms describe similar behavior with different terms, such as query rewriting or query decomposition (Siddiqui, n.d.).</p>
+<img src="/blog/images/what-is-query-fan-out-ai-search.jpg" alt="Diagram showing one customer question, best roofer in Orlando for hurricane damage, fanning out into five related sub-queries that feed a single AI answer" style="width:100%;border-radius:10px;margin:24px 0" loading="lazy">
+<h2>Who this applies to</h2>
+<p>Any business whose customers ask AI tools open-ended, considered questions: "best estate planning attorney in Orlando," "who should I call for a roof leak after a storm," "is this med spa worth it." Those are exactly the multi-part questions Google says AI Mode is built for, where "further exploration, reasoning, or complex comparisons are needed" (Google Search Central, 2025). Simple lookups, like a phone number, are less affected.</p>
+<h2>How we'd evaluate it</h2>
+<p>We start with the question a real customer would ask, then map the related questions an AI system would plausibly need answered to respond well: credentials, service area, pricing structure, reviews, and specific situations. Then we check two things. Does the business's own site answer those related questions clearly? And when we run the original question through ChatGPT, Perplexity, Google AI Overviews, and AI Mode, which sources get cited and which businesses get named?</p>
+<p>One caveat up front: the actual sub-queries each system generates are not published. Any list of "fan-out queries" from a tool or agency, including ours, is an informed estimate, not a readout of what Google or OpenAI actually ran.</p>
+<h2>Available options</h2>
+<ul>
+<li><strong>Answer the related questions, not just the main one.</strong> A service page that also covers cost ranges, timelines, licensing, and common situations gives an AI system more places to match.</li>
+<li><strong>Keep third-party profiles consistent.</strong> Fan-out can pull from reviews, directories, and your Google Business Profile, not just your website. Google specifically lists keeping Business Profile information up to date as worthwhile (Google Search Central, 2025).</li>
+<li><strong>Make sure the basics work.</strong> A page has to be indexed and eligible to show a snippet in Google Search to be used as a supporting link in AI Overviews or AI Mode. Google says there are no additional technical requirements (Google Search Central, 2025).</li>
+</ul>
+<h2>Benefits, limitations, and tradeoffs</h2>
+<p>The upside: fan-out can surface pages that wouldn't win a single head term. Google says its models identify more supporting pages while responses are generated, which lets it show "a wider and more diverse set of helpful links" than a classic search (Google Search Central, 2025). A smaller business with a clear, specific answer to one sub-question has a real opening.</p>
+<p>The limitations are just as real. You can't see the sub-queries, so you can't target them precisely. AI Overviews often don't trigger at all, and AI Mode and AI Overviews use different models, so the links they show vary (Google Search Central, 2025). And covering more questions isn't the same as padding a page. Google also says you don't need special AI text files or special schema markup to appear in these features (Google Search Central, 2025), so be skeptical of anyone selling a "fan-out optimization" add-on as a technical fix.</p>
+<h2>What we know</h2>
+<p>Four things are documented. First, Google confirms AI Overviews and AI Mode may run multiple related searches across subtopics and data sources to build a response (Google Search Central, 2025). Second, AI Mode's Deep Search takes the same technique further and "can issue hundreds of searches" for a single research question (Reid, 2025). Third, Google has been building toward this for years: the query-variant patent has a 2017 priority date and was granted May 30, 2023 (Alakuijala et al., 2023). Fourth, Search Engine Land's guide reports that ChatGPT, Perplexity, and Microsoft Copilot use comparable query expansion methods, though each describes and runs it differently (Siddiqui, n.d.).</p>
+<p>What isn't documented: how many sub-queries a given local question produces, which ones matter most, or how each engine weighs the results. Anyone claiming precise answers to those questions is guessing.</p>
+<h2>Next steps</h2>
+<p>Pick your most valuable service and write down the question a customer would actually ask an AI tool about it. Then list five to ten related questions that customer would need answered to make a decision. Check whether your site answers each one in plain language, on a page Google has indexed. Fill the gaps first. Then run the original question through two or three AI tools and note which sources they cite.</p>
+<h2>Orlando considerations</h2>
+<p>Central Florida questions often come with built-in sub-questions: hurricane season, Florida licensing, HOA rules, bilingual service, tourist versus resident needs. A question like "best roofer in Orlando" plausibly fans out into storm damage, insurance claims, and emergency service. Local businesses that answer those Florida-specific angles on their own site give AI systems something concrete to find.</p>
+<h2>Frequently asked questions</h2>
+
+<details><summary>Is query fan-out only a Google thing?</summary><p>Google coined the term for AI Mode and AI Overviews. Search Engine Land's guide reports that ChatGPT, Perplexity, and Microsoft Copilot use comparable approaches under different names, such as query rewriting or iterative retrieval (Siddiqui, n.d.).</p></details>
+<details><summary>Can I see which sub-queries Google ran for my customer's question?</summary><p>No. Google doesn't publish the sub-queries. Google's documentation says AI Overviews and AI Mode traffic is counted within Search Console's overall Web search data, and it doesn't describe any report of the fan-out queries behind a response (Google Search Central, 2025).</p></details>
+<details><summary>Do I need special markup or an AI file to benefit from fan-out?</summary><p>Google says no. There are no additional requirements to appear in AI Overviews or AI Mode, and no special schema.org structured data or AI text files are needed. Standard SEO fundamentals still apply (Google Search Central, 2025).</p></details>
+<details><summary>Should I create a separate page for every possible sub-query?</summary><p>Usually not. Search Engine Land's guide suggests pages that clearly address the related questions around a topic in one place give AI systems more reasons to reuse them (Siddiqui, n.d.). In our view, thin pages built for each variation add little.</p></details>
+<h2>References</h2>
+<p>Alakuijala, J., Buck, C., Bulian, J., Ciaramita, M., Gajewski, W., Gesmundo, A., Houlsby, N., &amp; Wang, W. (2023). <em>Generating query variants using a trained generative model</em> (U.S. Patent No. 11,663,201 B2). U.S. Patent and Trademark Office. <a href="https://patents.google.com/patent/US11663201B2/en">https://patents.google.com/patent/US11663201B2/en</a></p>
+<p>Google Search Central. (2025, December 10). <em>AI features and your website</em>. Google for Developers. <a href="https://developers.google.com/search/docs/appearance/ai-features">https://developers.google.com/search/docs/appearance/ai-features</a></p>
+<p>Reid, E. (2025, May 20). <em>AI in Search: Going beyond information to intelligence</em>. Google: The Keyword. <a href="https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/">https://blog.google/products-and-platforms/products/search/google-search-ai-mode-update/</a></p>
+<p>Siddiqui, L. (n.d.). <em>Query fan-out in AI search: What is it and how does it work?</em> Search Engine Land. Retrieved September 23, 2026, from <a href="https://searchengineland.com/guide/query-fan-out">https://searchengineland.com/guide/query-fan-out</a></p>
+
+<div class="disclaimer">
+This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. Google AI Overviews, AI Mode, ChatGPT, Perplexity, and similar tools are operated by third parties outside AnswerFoundry's control, and their behavior changes without notice. Results vary by business, market, and competition.
+</div>
+
+<p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+<p class="reviewed">Last updated: September 23, 2026</p>
+
+<p style="margin-top:28px;color:var(--slate)">Not sure which related questions AI tools are checking for your business, or whether your site answers them? An AI visibility audit maps the questions, tests the engines, and shows you where the gaps are.</p>
+</div>
+</article>
+
+<section id="main" class="final">
+  <div class="wrap">
+    <h2>Find out what AI says about your business.</h2>
+    <p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+    <a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
