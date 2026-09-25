@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Can I see my AI Overviews and AI Mode traffic in Google Search Console? | AnswerFoundry</title>
+<meta name="description" content="Google Search Console now has a generative AI performance report for AI Overviews and AI Mode. Here's what it shows, what it leaves out, and how a local business should use it.">
+<meta property="og:title" content="Can I see my AI Overviews and AI Mode traffic in Google Search Console?">
+<meta property="og:description" content="Google Search Console now has a generative AI performance report for AI Overviews and AI Mode. Here's what it shows, what it leaves out, and how a local business should use it.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/can-i-see-ai-overviews-in-search-console.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Can I see my AI Overviews and AI Mode traffic in Google Search Console?">
+<meta name="twitter:description" content="Google Search Console now has a generative AI performance report for AI Overviews and AI Mode. Here's what it shows, what it leaves out, and how a local business should use it.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/can-i-see-ai-overviews-in-search-console.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "Article",
+ "headline": "Can I see my AI Overviews and AI Mode traffic in Google Search Console?",
+ "description": "Google Search Console now has a generative AI performance report for AI Overviews and AI Mode. Here's what it shows, what it leaves out, and how a local business should use it.",
+ "image": "https://answerfoundry.ai/blog/images/can-i-see-ai-overviews-in-search-console.jpg",
+ "datePublished": "2026-09-25",
+ "dateModified": "2026-09-25",
+ "author": {
+  "@type": "Person",
+  "name": "Kenny Chantasi",
+  "jobTitle": "DO"
+ },
+ "publisher": {
+  "@type": "Organization",
+  "name": "AnswerFoundry LLC",
+  "url": "https://answerfoundry.ai/"
+ },
+ "mainEntityOfPage": "https://answerfoundry.ai/blog/can-i-see-ai-overviews-in-search-console.html"
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "BreadcrumbList",
+ "itemListElement": [
+  {
+   "@type": "ListItem",
+   "position": 1,
+   "name": "Home",
+   "item": "https://answerfoundry.ai/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 2,
+   "name": "Blog",
+   "item": "https://answerfoundry.ai/blog/"
+  },
+  {
+   "@type": "ListItem",
+   "position": 3,
+   "name": "AI Overviews data in Search Console",
+   "item": "https://answerfoundry.ai/blog/can-i-see-ai-overviews-in-search-console.html"
+  }
+ ]
+}
+</script>
+<script type="application/ld+json">
+{
+ "@context": "https://schema.org",
+ "@type": "FAQPage",
+ "mainEntity": [
+  {
+   "@type": "Question",
+   "name": "Does the generative AI report show clicks from AI Overviews?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. As of September 25, 2026, the report shows impressions only. Clicks from AI features are still counted in the regular Performance report under the Web search type, but they aren't separated out."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Why don't I see the report in my Search Console?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Google lists three reasons: the rollout hasn't reached your property, your site hasn't had enough impressions in AI features, or your site has been excluded from Search generative AI features in Settings."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "Does this report cover ChatGPT or Perplexity?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "No. Search Console only reports on Google Search and Discover. Visibility in ChatGPT, Perplexity, and other assistants has to be checked separately."
+   }
+  },
+  {
+   "@type": "Question",
+   "name": "If my AI impressions go up, will I get more customers?",
+   "acceptedAnswer": {
+    "@type": "Answer",
+    "text": "Not necessarily. An impression only means a link to your site was shown. It doesn't show whether anyone clicked, what the answer said about you, or whether it recommended a competitor. No one can guarantee placement in Google's AI features, including AnswerFoundry."
+   }
+  }
+ ]
+}
+</script>
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap">
+<p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / AI Overviews data in Search Console</p>
+<p class="post-date">Published September 25, 2026</p>
+<h1>Can I see my AI Overviews and AI Mode traffic in Google Search Console?</h1>
+
+<p class="lede">Partly. Since August 31, 2026, every website in Google Search Console is supposed to have a generative AI performance report that shows how often links to your site appeared in AI Overviews and AI Mode. It counts impressions, broken down by page, country, device, and date. It does not show clicks, and it does not show the questions people asked. So you can now see whether Google’s AI is showing your pages, but not how much business that brought in.</p>
+
+<div class="prose">
+<h2>What this means</h2>
+<p>Until this year, AI Overviews and AI Mode data was mixed into Search Console’s regular Performance report with no way to pull it out. Google still counts it there: sites that appear in AI features are included in overall search traffic, reported under the “Web” search type (Google Search Central, 2025).</p>
+<p>On June 3, 2026, Google announced separate generative AI performance reports for Search and Discover and started with a subset of sites. A note added to that announcement says that as of August 31, 2026, the reports have rolled out to all websites worldwide (Maoz &amp; Samet, 2026). The Search version covers AI Overviews and AI Mode. Google counts an impression each time a link to your site is shown to a user in one of those features (Search Console Help, n.d.).</p>
+
+<img src="/blog/images/can-i-see-ai-overviews-in-search-console.jpg" alt="An older Google Search Console Search Analytics report, in an Indonesian-language interface, showing a 28-day line chart of clicks" style="width:100%;border-radius:10px;margin:24px 0" loading="lazy">
+<p style="font-size:.78rem;color:var(--mist);margin-top:-16px;margin-bottom:24px">Photo: <a href="https://commons.wikimedia.org/w/index.php?curid=68676645">“Google Search Console” by Dwinandha</a>, CC BY-SA 4.0. An older version of the regular Search Console performance report, shown for context. It is not the new generative AI report.</p>
+
+<h2>Who this applies to</h2>
+<p>Any business with a verified Search Console property. That includes local service businesses whose customers now ask Google long, specific questions in AI Mode, such as which firm handles a certain kind of case or which contractor does a certain repair near them.</p>
+<p>It does not cover ChatGPT, Perplexity, Claude, or Gemini as a standalone app. Search Console only reports on Google Search and Discover. It also leaves out experiments in Search Labs (Search Console Help, n.d.).</p>
+
+<h2>How we’d evaluate it</h2>
+<p>For a client, we’d check three things in the first sitting:</p>
+<ul>
+<li><strong>Do you have the report at all?</strong> Google’s help page says a property may not see it if the rollout hasn’t reached it yet, if the site hasn’t had enough impressions in AI features, or if the site was excluded from Search generative AI features in Settings (Search Console Help, n.d.). The third one is worth checking on purpose. Someone may have switched that setting on without knowing what it does.</li>
+<li><strong>Which pages show up?</strong> Sort the Pages tab by impressions. Often a handful of pages carry nearly all the AI visibility, and they aren’t always the pages the business cares about most.</li>
+<li><strong>What doesn’t show up?</strong> Compare that list with your main service pages. A core service page with no AI impressions is a lead worth following.</li>
+</ul>
+
+<h2>Available options</h2>
+<p>Use the new report for trend lines and page-level visibility. Use the regular Performance report for clicks and queries, keeping in mind that AI feature traffic is blended in there. Use Google Analytics or your call tracking for what happened after someone arrived. Google’s own guidance points site owners to Analytics for conversions and time on site (Google Search Central, 2025).</p>
+<p>For the questions Search Console can’t answer, such as what AI Mode actually said about you or who it named instead, you still have to run the searches yourself and write down the results.</p>
+
+<h2>Benefits, limitations, and tradeoffs</h2>
+<p>The benefit is plain: first-party data from Google on whether its AI features are showing your pages, at hourly, daily, weekly, or monthly granularity (Maoz &amp; Samet, 2026).</p>
+<p>The limits are real, though. There is no click data (Southern, 2026). The listed dimensions are pages, countries, devices, and dates, with no query dimension (Search Console Help, n.d.). Impressions in the chart are counted per property, so two links to your site in the same AI answer count once. When you export the data, values shown as “~” or “-” become zeros (Search Console Help, n.d.). An impression also only means a link was shown. It says nothing about whether the answer described your business accurately or recommended you.</p>
+
+<h2>What we know</h2>
+<p>Google has been consistent that there are no special requirements or special markup needed to appear in AI Overviews or AI Mode. A page needs to be indexed and eligible to show with a snippet (Google Search Central, 2025). Google also says clicks from results pages with AI Overviews are “higher quality,” meaning people spend more time on the site. That is Google’s claim about its own product, and the new report gives you no click data to check it against.</p>
+<p>Search Engine Journal reports that the report launch came alongside a Search Console setting that lets a site opt out of AI features in Search. Sites that opt out get no traffic or impressions from those features. The UK Competition and Markets Authority has set a March 2027 deadline for page-level controls and also expects click-through data, though Google’s August 31 update didn’t mention click reporting (Southern, 2026). We don’t know yet when, or whether, clicks will be added.</p>
+
+<h2>Next steps</h2>
+<ol>
+<li>Open Search Console and check whether the generative AI performance report appears under Performance.</li>
+<li>If it doesn’t, check Settings to confirm your site hasn’t been excluded from Search generative AI features.</li>
+<li>Export the Pages view and save it with today’s date as a baseline.</li>
+<li>Compare that list with the pages that bring in your best customers.</li>
+<li>Check the report again monthly, and run a few real AI Mode searches alongside it so you know what the answers actually say.</li>
+</ol>
+
+<h2>Orlando considerations</h2>
+<p>For Orlando and Central Florida businesses, the Countries tab won’t tell you much, since nearly all of your customers are in one country. The more useful views are Pages and Devices. For a local service business, phone searches are often where the hurried “who should I call” question gets asked, so a split between mobile and desktop impressions is worth tracking over time. That’s our reasoning, not a measured result.</p>
+
+<h2>Frequently asked questions</h2>
+
+<details>
+<summary>Does the generative AI report show clicks from AI Overviews?</summary>
+<p>No. As of September 25, 2026, the report shows impressions only. Clicks from AI features are still counted in the regular Performance report under the Web search type, but they aren’t separated out.</p>
+</details>
+<details>
+<summary>Why don’t I see the report in my Search Console?</summary>
+<p>Google lists three reasons: the rollout hasn’t reached your property, your site hasn’t had enough impressions in AI features, or your site has been excluded from Search generative AI features in Settings.</p>
+</details>
+<details>
+<summary>Does this report cover ChatGPT or Perplexity?</summary>
+<p>No. Search Console only reports on Google Search and Discover. Visibility in ChatGPT, Perplexity, and other assistants has to be checked separately.</p>
+</details>
+<details>
+<summary>If my AI impressions go up, will I get more customers?</summary>
+<p>Not necessarily. An impression only means a link to your site was shown. It doesn’t show whether anyone clicked, what the answer said about you, or whether it recommended a competitor. No one can guarantee placement in Google’s AI features, including AnswerFoundry.</p>
+</details>
+
+<h2>References</h2>
+<p>Google Search Central. (2025, December 10). <em>AI features and your website</em>. Google for Developers. <a href="https://developers.google.com/search/docs/appearance/ai-features">https://developers.google.com/search/docs/appearance/ai-features</a></p>
+<p>Maoz, H., &amp; Samet, M. (2026, June 3; updated 2026, August 31). <em>Introducing Search generative AI performance reports in Search Console</em>. Google Search Central Blog. <a href="https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports">https://developers.google.com/search/blog/2026/06/gen-ai-performance-reports</a></p>
+<p>Search Console Help. (n.d.). <em>Generative AI performance report (Search)</em>. Google. Retrieved September 25, 2026, from <a href="https://support.google.com/webmasters/answer/16984139?hl=en">https://support.google.com/webmasters/answer/16984139?hl=en</a></p>
+<p>Southern, M. G. (2026, August 31). <em>Google Search Console AI reports rolled out worldwide</em>. Search Engine Journal. <a href="https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/">https://www.searchenginejournal.com/google-search-console-ai-reports-rolled-out-worldwide/587836/</a></p>
+
+<div class="disclaimer">
+This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. Google Search, AI Mode, ChatGPT, Perplexity, and similar tools are operated by third parties outside AnswerFoundry's control, and their behavior and features change without notice. Results vary by business, market, and competition.
+</div>
+
+<p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+<p class="reviewed">Last updated: September 25, 2026</p>
+
+<p style="margin-top:28px;color:var(--slate)">If you’re not sure whether Google, ChatGPT, or other AI engines are finding your business at all, that’s the gap an AI visibility audit is built to map, with a prioritized list of what to fix first.</p>
+</div>
+</article>
+
+
+<section id="main" class="final">
+  <div class="wrap">
+    <h2>Find out what AI says about your business.</h2>
+    <p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+    <a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
