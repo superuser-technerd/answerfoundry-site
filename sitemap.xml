@@ -495,4 +495,16 @@ dateModified in each post's on-page JSON-LD. -->
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://answerfoundry.ai/blog/do-best-of-lists-help-ai-search-visibility.html</loc>
+<lastmod>2026-09-26</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
+<loc>https://answerfoundry.ai/blog/can-i-see-ai-overviews-in-search-console.html</loc>
+<lastmod>2026-09-25</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
