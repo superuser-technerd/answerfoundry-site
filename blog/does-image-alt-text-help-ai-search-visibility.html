@@ -1,0 +1,310 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Does Image Alt Text Help My Business Show Up in AI Search? | AnswerFoundry</title>
+<meta name="description" content="Alt text still matters, mostly for accessibility and ordinary image search. Here is what Google and W3C say, what is only vendor opinion, and how to write it.">
+<meta property="og:title" content="Does Image Alt Text Help My Business Show Up in AI Search?">
+<meta property="og:description" content="Alt text matters for accessibility and image search. Here is what Google and W3C actually say about it, and what is only vendor opinion.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/does-image-alt-text-help-ai-search-visibility.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Does Image Alt Text Help My Business Show Up in AI Search?">
+<meta name="twitter:description" content="Alt text matters for accessibility and image search. Here is what Google and W3C actually say about it, and what is only vendor opinion.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/does-image-alt-text-help-ai-search-visibility.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "Does image alt text help my business show up in AI search?",
+  "description": "Alt text still matters, mostly for accessibility and ordinary image search. Here is what Google and W3C say, what is only vendor opinion, and how to write it.",
+  "datePublished": "2026-10-01",
+  "dateModified": "2026-10-01",
+  "author": {
+    "@type": "Person",
+    "name": "Kenny Chantasi",
+    "jobTitle": "DO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AnswerFoundry LLC",
+    "url": "https://answerfoundry.ai/"
+  },
+  "mainEntityOfPage": "https://answerfoundry.ai/blog/does-image-alt-text-help-ai-search-visibility.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://answerfoundry.ai/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://answerfoundry.ai/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "Image alt text and AI search", "item": "https://answerfoundry.ai/blog/does-image-alt-text-help-ai-search-visibility.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Do I need alt text on every image?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Every image that carries information or has a function should have it. Purely decorative images should have an empty alt attribute (alt=\"\") so screen readers skip them, per the W3C Web Accessibility Initiative. Missing alt text is one of the things Google's image guidance tells site owners to avoid."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Will good alt text get my business cited by ChatGPT or Google AI?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Google says there are no special requirements or extra optimizations for AI Overviews and AI Mode beyond normal Search eligibility. Good alt text makes your images understandable and your pages more accessible. It does not guarantee a citation anywhere."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long should alt text be?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Short and specific. Google's guidance asks for text that is concise but descriptive, and neither Google nor the W3C sets a character count. If a sentence says what the image shows and why it is on the page, that is usually enough."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Should I put keywords in alt text?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Only if they are a natural part of describing the image. Google's guidance warns that stuffing alt attributes with keywords gives a poor experience and can be treated as spam."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / Image alt text and AI search</p>
+  <p class="post-date">Published October 1, 2026</p>
+  <h1>Does image alt text help my business show up in AI search?</h1>
+
+  <p class="lede">Alt text helps, but not in the way most AI-search advice suggests. It is a short written description of an image, and Google's own documentation treats it as part of ordinary image SEO and accessibility. Nobody at Google or OpenAI has published a rule that says alt text earns a business a place in an AI answer. Write it because it makes your site usable and your images understandable, not as a trick.</p>
+
+  <div class="prose">
+    <h2>What this means</h2>
+    <p>Alt text is the description stored in an image's alt attribute. Screen readers read it aloud, browsers show it when an image fails to load, and search engines use it to understand what the image is. Google's image guidance says it should be useful, information-rich, and accurate to what the image shows, and it flags missing, generic, and keyword-stuffed alt text as problems (Google Search Central, 2026a).</p>
+    <img src="/blog/images/does-image-alt-text-help-ai-search-visibility.jpg" alt="A shelf holding several vintage film cameras, including a Kodak Pony 828 and a Super Balda camera" style="width:100%;border-radius:10px;margin:24px 0" loading="lazy">
+    <p style="font-size:.78rem;color:var(--mist);margin-top:-16px;margin-bottom:24px">Photo: <a href="https://www.flickr.com/photos/37996646802@N01/7848168030">"Camera Classics" by cogdogblog</a>, CC BY 2.0</p>
+    <p>The AI angle is where claims get loose. Google states that there are no additional requirements or special optimizations needed to appear in AI Overviews or AI Mode. A page needs to be indexed and eligible to show a snippet, and that is the bar (Google Search Central, 2025). So alt text is not an AI lever. It is one small part of a page that search systems, including the ones behind AI features, can read well.</p>
+
+    <h2>Who this applies to</h2>
+    <p>Any business with photos on its site. That includes a dental practice with team and office photos, a contractor with project galleries, a restaurant with menu images, and a law firm with headshots. If your images are mostly decoration, the main job is marking them as decorative. If they show your work, your staff, or your location, they deserve a real description.</p>
+
+    <h2>How we'd evaluate it</h2>
+    <p>We would crawl the site and sort every image into one of four groups: informative, functional (an image that works as a link or button), complex (charts and diagrams), and decorative. Then we check the alt attribute against what the W3C Web Accessibility Initiative says each group needs. Informative images need a short description of the essential content. Functional images should describe what the link or button does, not what it looks like. Decorative images get an empty alt attribute (W3C Web Accessibility Initiative, 2026).</p>
+    <p>We also look at whether important information, such as hours, prices, or service lists, lives only inside an image. That is a separate and bigger problem than weak alt text. Put it in real page text.</p>
+
+    <h2>Available options</h2>
+    <ul>
+      <li><strong>Fix it yourself.</strong> Most website builders expose an alt text field on each image. Go through your top pages first: home, services, and location pages.</li>
+      <li><strong>Include it in a content audit.</strong> Alt text is one line item next to headings, structured data, and listing consistency.</li>
+      <li><strong>Leave decorative images alone.</strong> An empty alt attribute is correct for them. Do not invent descriptions to fill the field.</li>
+    </ul>
+
+    <h2>Benefits, limitations, and tradeoffs</h2>
+    <p>The benefits are real but modest: better accessibility for people using screen readers, clearer signals for image search, and a cleaner page overall. The limitation is that nothing published by the major platforms ties alt text to AI citations. The tradeoff is time. Rewriting alt text across a large site is tedious, and the payoff is mostly accessibility, so prioritize the pages that matter most.</p>
+
+    <h2>What we know</h2>
+    <p>Three things are documented. First, Google defines alt text as text that describes an image, says it helps Google understand the image, and asks for concise, descriptive wording without keyword stuffing (Google Search Central, 2026a). Second, Google's guide to generative AI features says optimizing for them is still SEO and recommends supporting your text with high-quality, relevant images and videos where it makes sense (Google Search Central, 2026b). It does not name alt text as an AI-specific requirement. Third, the W3C says a text alternative should convey the information or function of the image, and that decorative images should be given an empty one (W3C Web Accessibility Initiative, 2026).</p>
+    <p>What is only opinion: accessibility vendor Siteimprove argues that precise image descriptions improve an AI system's ability to extract and cite accurate information (Jeske, 2026). That may be reasonable, but it is a vendor's claim, and we found no documentation from Google, OpenAI, or Microsoft confirming it. Treat it as a plausible idea, not a finding.</p>
+
+    <h2>Next steps</h2>
+    <p>Pick your five most important pages. For each image, decide whether it is informative, functional, complex, or decorative. Write a one-sentence description for the informative ones, leave the decorative ones empty, and move any key facts out of images and into text. Then re-test how AI engines describe your business a month later, knowing the change is unlikely to move the result by itself.</p>
+
+    <h2>Orlando considerations</h2>
+    <p>Orlando service businesses tend to be photo-heavy: before-and-after galleries, dining rooms, treatment rooms, job sites. Those photos are often the only place a business shows its real location and work. Descriptions that name the actual subject, such as the type of room or project and the neighborhood where it applies, are more useful to a reader than "photo1.jpg" or "best Orlando company." Florida's tourism traffic also means many searchers are strangers to the area, so clear, plain descriptions help.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Do I need alt text on every image?</summary>
+      <p>Every image that carries information or has a function should have it. Purely decorative images should have an empty alt attribute (alt="") so screen readers skip them, per the W3C Web Accessibility Initiative. Missing alt text is one of the things Google's image guidance tells site owners to avoid.</p>
+    </details>
+    <details>
+      <summary>Will good alt text get my business cited by ChatGPT or Google AI?</summary>
+      <p>No. Google says there are no special requirements or extra optimizations for AI Overviews and AI Mode beyond normal Search eligibility. Good alt text makes your images understandable and your pages more accessible. It does not guarantee a citation anywhere.</p>
+    </details>
+    <details>
+      <summary>How long should alt text be?</summary>
+      <p>Short and specific. Google's guidance asks for text that is concise but descriptive, and neither Google nor the W3C sets a character count. If a sentence says what the image shows and why it is on the page, that is usually enough.</p>
+    </details>
+    <details>
+      <summary>Should I put keywords in alt text?</summary>
+      <p>Only if they are a natural part of describing the image. Google's guidance warns that stuffing alt attributes with keywords gives a poor experience and can be treated as spam.</p>
+    </details>
+
+    <h2>References</h2>
+    <p>Google Search Central. (2025, December 10). <em>AI features and your website</em>. Google for Developers. <a href="https://developers.google.com/search/docs/appearance/ai-features">https://developers.google.com/search/docs/appearance/ai-features</a></p>
+    <p>Google Search Central. (2026a, March 2). <em>Image SEO best practices</em>. Google for Developers. <a href="https://developers.google.com/search/docs/appearance/google-images">https://developers.google.com/search/docs/appearance/google-images</a></p>
+    <p>Google Search Central. (2026b, July 10). <em>Google's guide to optimizing for generative AI features on Google Search</em>. Google for Developers. <a href="https://developers.google.com/search/docs/fundamentals/ai-optimization-guide">https://developers.google.com/search/docs/fundamentals/ai-optimization-guide</a></p>
+    <p>Jeske, S. (2026, April 22). <em>Alt text: How to make meaning obvious to humans and machines</em>. Siteimprove. <a href="https://www.siteimprove.com/blog/alt-text-quality-human-machines/">https://www.siteimprove.com/blog/alt-text-quality-human-machines/</a></p>
+    <p>W3C Web Accessibility Initiative. (2026, April 8). <em>Images tutorial</em>. W3C. <a href="https://www.w3.org/WAI/tutorials/images/">https://www.w3.org/WAI/tutorials/images/</a></p>
+
+    <div class="disclaimer">
+      This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. ChatGPT, Perplexity, Google AI, and similar tools are operated by third parties outside AnswerFoundry's control, and their behavior changes without notice. Results vary by business, market, and competition.
+    </div>
+
+    <p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+    <p class="reviewed">Last updated: October 1, 2026</p>
+
+    <p style="margin-top:28px;color:var(--slate)">If you want to know how AI engines currently describe your business and which fixes are worth your time, an AI visibility audit maps the gaps and puts them in priority order.</p>
+  </div>
+</article>
+
+<section id="main" class="final">
+  <div class="wrap">
+    <h2>Find out what AI says about your business.</h2>
+    <p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+    <a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
