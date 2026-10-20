@@ -616,6 +616,12 @@ dateModified in each post's on-page JSON-LD. -->
 <priority>0.7</priority>
 </url>
 <url>
+<loc>https://answerfoundry.ai/blog/how-do-law-firms-show-up-in-ai-search.html</loc>
+<lastmod>2026-10-20</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+<url>
 <loc>https://answerfoundry.ai/blog/how-do-restaurants-show-up-in-ai-search.html</loc>
 <lastmod>2026-10-19</lastmod>
 <changefreq>monthly</changefreq>
