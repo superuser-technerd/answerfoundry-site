@@ -651,4 +651,10 @@ dateModified in each post's on-page JSON-LD. -->
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://answerfoundry.ai/blog/how-to-show-up-in-microsoft-copilot-answers.html</loc>
+<lastmod>2026-11-10</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
