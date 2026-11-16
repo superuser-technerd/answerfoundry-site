@@ -687,4 +687,10 @@ dateModified in each post's on-page JSON-LD. -->
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://answerfoundry.ai/blog/do-ai-browser-agents-change-how-customers-find-my-business.html</loc>
+<lastmod>2026-11-16</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
