@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>What Is an Entity in AI Search, and Is My Business One? | AnswerFoundry</title>
+<meta name="description" content="An entity is a specific, identifiable thing search systems can tell apart from everything else with the same name. What Google documents about entities, and how a business becomes a clear one.">
+<meta property="og:title" content="What Is an Entity in AI Search, and Is My Business One?">
+<meta property="og:description" content="An entity is a specific, identifiable thing search systems can tell apart from everything else with the same name. Here's what Google documents, and what it means for your business.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://answerfoundry.ai/blog/what-is-an-entity-in-ai-search.html">
+<meta property="og:image" content="https://answerfoundry.ai/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="What Is an Entity in AI Search, and Is My Business One?">
+<meta name="twitter:description" content="An entity is a specific, identifiable thing search systems can tell apart from everything else with the same name. Here's what Google documents, and what it means for your business.">
+<meta name="twitter:image" content="https://answerfoundry.ai/og-image.png">
+<link rel="canonical" href="https://answerfoundry.ai/blog/what-is-an-entity-in-ai-search.html">
+<link rel="icon" type="image/x-icon" href="/favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="apple-touch-icon" href="/apple-touch-icon.png">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Article",
+  "headline": "What is an entity in AI search, and is my business one?",
+  "description": "An entity is a specific, identifiable thing search systems can tell apart from everything else with the same name. What Google documents about entities, and how a business becomes a clear one.",
+  "datePublished": "2026-11-19",
+  "dateModified": "2026-11-19",
+  "author": {
+    "@type": "Person",
+    "name": "Kenny Chantasi",
+    "jobTitle": "DO"
+  },
+  "publisher": {
+    "@type": "Organization",
+    "name": "AnswerFoundry LLC",
+    "url": "https://answerfoundry.ai/"
+  },
+  "mainEntityOfPage": "https://answerfoundry.ai/blog/what-is-an-entity-in-ai-search.html"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://answerfoundry.ai/" },
+    { "@type": "ListItem", "position": 2, "name": "Blog", "item": "https://answerfoundry.ai/blog/" },
+    { "@type": "ListItem", "position": 3, "name": "What is an entity in AI search?", "item": "https://answerfoundry.ai/blog/what-is-an-entity-in-ai-search.html" }
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "Is entity SEO different from regular SEO?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "It's a lens on the same work, not a separate discipline. Regular SEO asks whether a page matches a search. Entity work asks whether search systems know exactly which business you are and trust the facts about you. Most of the fixes overlap: clear pages, accurate listings, and consistent information across the web."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do I need a knowledge panel to be an entity?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. A knowledge panel is one visible display of information Google has about an entity, and Google says panels are created automatically when enough information is available on the open web. Local businesses usually get a Business Profile panel instead, which Google says businesses should create and claim through Business Profile."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What does sameAs do in schema markup?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Schema.org defines sameAs as the URL of a page that unambiguously indicates the item's identity, such as a Wikipedia page, Wikidata entry, or official website. In Organization markup, Google describes it as a link to a page on another site with more information about your organization, like a social or review profile. It's a way of saying these profiles all describe the same business."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do ChatGPT and Perplexity use Google's Knowledge Graph?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not that either company has documented. The Knowledge Graph is Google's system. Other AI engines build their own picture of a business from the sources they can search and read. That's why consistent facts across your website, listings, and third-party profiles matter more than any single platform."
+      }
+    }
+  ]
+}
+</script>
+<style>
+:root{
+  --ink:#101828;--slate:#475467;--mist:#98a2b3;--line:#e6e9f0;
+  --paper:#ffffff;--fog:#f7f8fb;--forge:#e8590c;--forge-dk:#c2410c;
+  --ember:#fff3ec;--navy:#0b1b34;--navy2:#12294d;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:"Avenir Next","Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink);background:var(--paper);line-height:1.6}
+.wrap{max-width:760px;margin:0 auto;padding:0 24px}
+nav{position:sticky;top:0;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);z-index:50}
+.nav-in{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;align-items:center;justify-content:space-between;height:64px}
+.logo{font-size:1.25rem;font-weight:800;letter-spacing:-.02em;color:var(--ink);text-decoration:none}
+.logo span{color:var(--forge)}
+.nav-links{display:flex;gap:22px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+.nav-links a{color:var(--slate);text-decoration:none;font-size:.92rem;font-weight:500}
+.nav-links a:hover{color:var(--ink)}
+.btn{display:inline-block;background:var(--forge);color:#fff;padding:12px 22px;border-radius:8px;font-weight:700;text-decoration:none;font-size:.95rem;transition:background .15s}
+.btn:hover{background:var(--forge-dk)}
+@media(max-width:720px){.nav-links a:not(.btn){display:none}}
+.breadcrumb{font-size:.85rem;color:var(--mist);margin:32px 0 18px}
+.breadcrumb a{color:var(--slate);text-decoration:none}
+.breadcrumb a:hover{color:var(--ink)}
+.post-date{color:var(--mist);font-size:.85rem;font-weight:700;letter-spacing:.04em;text-transform:uppercase;margin-bottom:10px}
+h1{font-size:clamp(1.8rem,4.2vw,2.5rem);letter-spacing:-.02em;font-weight:800;line-height:1.18;margin-bottom:28px}
+.lede{font-size:1.12rem;color:var(--ink);font-weight:500;line-height:1.65;padding:20px 24px;background:var(--ember);border-left:3px solid var(--forge);border-radius:8px;margin-bottom:36px}
+.prose h2{font-size:1.35rem;margin:44px 0 14px;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+.prose p{color:var(--slate);margin-bottom:16px;font-size:1.02rem;line-height:1.72}
+.prose ul,.prose ol{color:var(--slate);margin:0 0 16px 22px;line-height:1.72}
+.prose li{margin-bottom:8px}
+.prose strong{color:var(--ink)}
+details{border-bottom:1px solid var(--line);padding:18px 0}
+summary{font-weight:700;cursor:pointer;font-size:1rem;list-style:none;display:flex;justify-content:space-between;align-items:center;color:var(--ink)}
+summary::after{content:"+";font-size:1.4rem;color:var(--forge);font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin-top:12px;color:var(--slate);font-size:.95rem}
+.disclaimer{background:var(--fog);border:1px solid var(--line);border-radius:10px;padding:18px 22px;font-size:.88rem;color:var(--slate);margin:40px 0}
+.byline{font-weight:700;color:var(--ink);margin-top:8px}
+.reviewed{color:var(--mist);font-size:.85rem;margin-top:4px}
+.final{background:var(--navy);text-align:center;color:#fff;padding:64px 0;margin-top:56px}
+.final .wrap{max-width:1080px}
+.final h2{color:#fff;font-size:clamp(1.5rem,3.4vw,2.1rem);letter-spacing:-.02em;font-weight:800;margin-bottom:14px}
+.final p{color:#b9c4d8;max-width:560px;margin:0 auto 30px}
+footer{background:#0a1526;color:#8fa0ba;padding:44px 0;font-size:.85rem}
+.foot{max-width:1080px;margin:0 auto;padding:0 24px;display:flex;justify-content:space-between;gap:24px;flex-wrap:wrap}
+footer a{color:#c4cfe0;text-decoration:none}
+footer a:hover{color:#fff}
+.foot-legal{display:inline-block;margin-top:8px;color:#6d7f99}
+
+/* --- added 2026-08-08: accessibility + legal page furniture --- */
+.skip{position:absolute;left:-9999px;top:0;background:var(--ink);color:#fff;padding:12px 18px;z-index:100;text-decoration:none;border-radius:0 0 8px 0;font-weight:700}
+.skip:focus{left:0}
+a:focus-visible,button:focus-visible,input:focus-visible,select:focus-visible,textarea:focus-visible,summary:focus-visible{outline:3px solid #0b57d0;outline-offset:2px;border-radius:3px}
+.legal .meta{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:16px 18px;margin:0 0 28px}
+.legal .meta p{margin:0 0 6px;font-size:.92rem}
+.legal .meta p:last-child{margin-bottom:0}
+.legal .callout{border-left:4px solid var(--forge);background:var(--ember);padding:14px 18px;border-radius:0 10px 10px 0;margin:22px 0}
+.legal .callout p{margin-bottom:10px}
+.legal .callout p:last-child{margin-bottom:0}
+.legal .toc{background:var(--fog);border:1px solid var(--line);border-radius:12px;padding:18px 22px;margin:0 0 32px}
+.legal .toc h2{border:0;margin:0 0 8px;padding:0;font-size:.78rem;text-transform:uppercase;letter-spacing:.08em;color:var(--slate)}
+.legal .toc ol{margin:0 0 0 20px}
+.legal .toc li{margin-bottom:4px}
+.legal .table-wrap{overflow-x:auto;margin:18px 0}
+.legal caption{text-align:left;font-weight:700;color:var(--ink);padding-bottom:8px;font-size:.95rem}
+.legal code{background:var(--fog);padding:2px 6px;border-radius:4px;font-size:.9em}
+.legal h2{scroll-margin-top:80px}
+.hero .emblem{display:block;margin:0 auto 20px}
+.lcards{list-style:none;margin:0 0 34px;padding:0}
+.lcards li{display:flex;gap:16px;align-items:flex-start;border:1px solid var(--line);border-radius:14px;padding:20px 22px;margin-bottom:14px;background:#fff;transition:box-shadow .15s,transform .15s}
+.lcards li:hover{box-shadow:0 12px 32px rgba(16,24,40,.08);transform:translateY(-2px)}
+.lcards h2{margin:0 0 4px!important;font-size:1.08rem}
+.lcards p{margin:0;font-size:.95rem}
+.card-ico{width:28px;height:28px;flex:0 0 auto;margin-top:3px;color:var(--forge)}
+.consent-box{display:none;border:1px solid var(--line);background:var(--fog);border-radius:10px;padding:14px 16px;margin:0 0 18px}
+.consent-box.is-visible{display:block}
+.form-err{color:#b42318;font-weight:600;font-size:.88rem;margin:8px 0 0}
+.agree-line{font-size:.88rem;color:var(--slate);margin:14px 0 0}
+.agree-line a{color:var(--forge-dk);font-weight:600}
+.optional-tag{font-weight:400;color:var(--mist);font-size:.85em}
+@media (forced-colors:active){.card-ico{color:CanvasText}}
+</style>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18379130059"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'AW-18379130059');
+</script></head>
+<body>
+<a class="skip" href="#main">Skip to main content</a>
+
+
+<nav>
+  <div class="nav-in">
+    <a class="logo" href="/">Answer<span>Foundry</span></a>
+    <div class="nav-links">
+      <a href="/#why">Why AI visibility</a>
+      <a href="/#services">Services</a>
+      <a href="/pricing/">Pricing</a>
+      <a href="/blog/">Blog</a>
+      <a href="/faq/">FAQ</a>
+      <a href="/sample-audit/">Sample Audit</a>
+      <a class="btn" href="/answer-snapshot/">Get Your Free Snapshot</a>
+    </div>
+  </div>
+</nav>
+
+<article class="wrap">
+  <p class="breadcrumb"><a href="/">Home</a> / <a href="/blog/">Blog</a> / What is an entity in AI search?</p>
+  <p class="post-date">Published November 19, 2026</p>
+  <h1>What is an entity in AI search, and is my business one?</h1>
+
+  <p class="lede">An entity is a specific, real-world thing that a search system can tell apart from everything else with the same or a similar name: a person, a place, a company, a product. Google built its Knowledge Graph around this idea in 2012 and called it "things, not strings." Your business is almost certainly an entity already. The real question is whether search systems and AI engines know which business you are, and whether the facts they hold about you are right.</p>
+
+  <div class="prose">
+    <h2>What this means</h2>
+    <p>Older search matched words. If someone typed "Taj Mahal," the engine looked for pages containing those words. When Google introduced the Knowledge Graph, it used that exact example: do you mean Taj Mahal the monument, or Taj Mahal the musician? The goal was a model that "understands real-world entities and their relationships to one another" (Singhal, 2012).</p>
+    <p>For a business, being an entity means being a distinct record rather than a loose collection of matching words. "Lakeside Dental" might be the name of a dozen practices across the country. An engine that treats your practice as an entity can connect your name to your address, your phone number, your services, your reviews, and your website, and keep all of that separate from the other eleven.</p>
+    <p>Google describes the Knowledge Graph as a database of billions of facts about people, places, and things, drawn from public sources, licensed data, and information content owners provide directly (Google, n.d.). AI answers lean on that same kind of understanding. An assistant can't confidently recommend a business it can't tell apart from others with the same name.</p>
+
+    <img src="/blog/images/what-is-an-entity-in-ai-search.jpg" alt="Network diagram of the Linked Open Data web, with Wikidata at the center connected to Wikimedia projects and many other interlinked data sources" style="width:100%;border-radius:10px;margin:24px 0" loading="lazy">
+    <p style="font-size:.78rem;color:var(--mist);margin-top:-16px;margin-bottom:24px">Image: <a href="https://commons.wikimedia.org/w/index.php?curid=125737156">"A view of the Linked Open Data web showing Wikidata, Wikibase and Wikimedia projects (cropped)" by Sintegrity</a>, CC BY-SA 4.0</p>
+
+    <h2>Who this applies to</h2>
+    <p>Every business, but some feel it more than others:</p>
+    <ul>
+      <li><strong>Businesses with common names.</strong> If your name shares words with other companies, people, or places, disambiguation is the whole game.</li>
+      <li><strong>Businesses that moved, rebranded, or merged.</strong> Old addresses and old names linger in directories and confuse the record.</li>
+      <li><strong>Multi-location businesses.</strong> Each location is its own place, and each needs its own clean set of facts.</li>
+      <li><strong>Professionals whose personal name is the brand.</strong> Doctors, lawyers, and consultants often need both the person and the practice to be clearly connected.</li>
+    </ul>
+
+    <h2>How we'd evaluate it</h2>
+    <p>We start by asking a simple question in several AI engines and in Google: "What is [business name] in [city]?" Then we look at whether the answer describes the right business, merges you with someone else, or comes back unsure. Mixed-up answers usually point to an entity problem, not a ranking problem.</p>
+    <p>Next we compare the core facts (name, address, phone, hours, website, category) across your website, your Google Business Profile, and the major directories and social profiles. Then we check your site's Organization or LocalBusiness structured data to see whether it states those same facts and links to your official profiles. Google says Organization markup on your home page can help it "disambiguate your organization in search results" (Google Search Central, 2026).</p>
+
+    <h2>Available options</h2>
+    <ul>
+      <li><strong>Make your website the clearest source.</strong> State your full business name, address, phone, and what you do in plain text, ideally on the home page and an About page.</li>
+      <li><strong>Add Organization or LocalBusiness structured data.</strong> Google recommends the most specific LocalBusiness subtype for a local business, and says there are no required properties: add as many relevant ones as apply (Google Search Central, 2026).</li>
+      <li><strong>Connect your profiles with sameAs.</strong> Schema.org defines sameAs as the URL of a page that "unambiguously indicates the item's identity" (Schema.org, n.d.). In practice, that means linking to your official social, review, and directory profiles. More on markup in <a href="/blog/does-schema-markup-help-ai-visibility.html">does schema markup help AI visibility?</a></li>
+      <li><strong>Claim and correct your panels.</strong> Google says businesses should use Business Profile to create, claim, and suggest changes to their Business Profile panels (Google, n.d.). See <a href="/blog/does-a-google-knowledge-panel-help-ai-visibility.html">does a Google knowledge panel help AI visibility?</a></li>
+      <li><strong>Clean up old or conflicting listings.</strong> Every stale address is a competing version of you.</li>
+    </ul>
+
+    <h2>Benefits, limitations, and tradeoffs</h2>
+    <p>The benefit of clear entity signals is that engines don't have to guess. When your facts agree everywhere, there's less chance an AI answer blends you with a competitor or quotes old hours. The work is also mostly one-time setup plus upkeep, not a monthly content treadmill.</p>
+    <p>The limitations are real. You don't control the Knowledge Graph. Google says knowledge panels appear automatically when information is relevant to a query and "isn't something we can or would influence" (Google, n.d.). Structured data helps Google understand you, but Google also says there's no special schema.org markup required to appear in its AI features (Google Search Central, 2025). Markup clarifies facts. It doesn't earn recommendations by itself; reviews, reputation, and relevance still do that.</p>
+
+    <h2>What we know</h2>
+    <ul>
+      <li><strong>The idea is official, not a marketing invention.</strong> Google introduced the Knowledge Graph on May 16, 2012, describing it as a model of "real-world entities and their relationships," with more than 500 million objects and 3.5 billion facts at launch (Singhal, 2012).</li>
+      <li><strong>Facts come from many places.</strong> Google says Knowledge Graph facts come from public sources, licensed data, and information received directly from content owners (Google, n.d.).</li>
+      <li><strong>Organization markup is meant for disambiguation.</strong> Google says some Organization properties are used "behind the scenes to disambiguate your organization from other organizations," and that sameAs can point to profile pages on social media or review sites (Google Search Central, 2026).</li>
+      <li><strong>Consistency matters for AI features.</strong> Google's guidance for its AI features recommends making sure structured data matches the visible text on the page and keeping Business Profile information up to date (Google Search Central, 2025).</li>
+    </ul>
+    <p>What isn't published: how ChatGPT, Perplexity, Claude, or Copilot represent businesses internally. Those companies haven't documented an equivalent of the Knowledge Graph, so we won't claim one. What we can say is that they all work from sources they can find and read, and consistent sources are easier to get right.</p>
+
+    <h2>Next steps</h2>
+    <p>Search your own business name in Google and in two AI assistants. Write down every fact each one gets wrong or leaves out. Then fix the source: update your website first, then your Google Business Profile, then the directories that disagree. If you have a developer, ask them to add Organization or LocalBusiness markup that matches your visible page text and lists your official profiles under sameAs. If an AI engine is already stating something incorrect, our guide on <a href="/blog/how-to-fix-incorrect-ai-answers-about-my-business.html">how to fix incorrect AI answers about your business</a> walks through it.</p>
+
+    <h2>Orlando considerations</h2>
+    <p>Orlando business names often borrow the same local words: Lake, Conway, Dr. Phillips, Winter Park, Lake Nona, Central Florida. That makes name collisions common, especially between businesses in different suburbs that share a neighborhood or lake name. If your name includes a place, make sure your address, service area, and phone number are spelled out the same way everywhere, so engines can tell your Winter Park office from a similarly named one in Winter Garden.</p>
+
+    <h2>Frequently asked questions</h2>
+
+    <details>
+      <summary>Is entity SEO different from regular SEO?</summary>
+      <p>It's a lens on the same work, not a separate discipline. Regular SEO asks whether a page matches a search. Entity work asks whether search systems know exactly which business you are and trust the facts about you. Most of the fixes overlap: clear pages, accurate listings, and consistent information across the web.</p>
+    </details>
+    <details>
+      <summary>Do I need a knowledge panel to be an entity?</summary>
+      <p>No. A knowledge panel is one visible display of information Google has about an entity, and Google says panels are created automatically when enough information is available on the open web. Local businesses usually get a Business Profile panel instead, which Google says businesses should create and claim through Business Profile.</p>
+    </details>
+    <details>
+      <summary>What does sameAs do in schema markup?</summary>
+      <p>Schema.org defines sameAs as the URL of a page that unambiguously indicates the item's identity, such as a Wikipedia page, Wikidata entry, or official website. In Organization markup, Google describes it as a link to a page on another site with more information about your organization, like a social or review profile. It's a way of saying these profiles all describe the same business.</p>
+    </details>
+    <details>
+      <summary>Do ChatGPT and Perplexity use Google's Knowledge Graph?</summary>
+      <p>Not that either company has documented. The Knowledge Graph is Google's system. Other AI engines build their own picture of a business from the sources they can search and read. That's why consistent facts across your website, listings, and third-party profiles matter more than any single platform.</p>
+    </details>
+
+    <h2>References</h2>
+    <p>Google. (n.d.). <em>How Google's Knowledge Graph works</em>. Knowledge Panel Help. Retrieved November 19, 2026, from <a href="https://support.google.com/knowledgepanel/answer/9787176?hl=en">https://support.google.com/knowledgepanel/answer/9787176?hl=en</a></p>
+    <p>Google Search Central. (2025, December 10). <em>AI features and your website</em>. Google for Developers. <a href="https://developers.google.com/search/docs/appearance/ai-features">https://developers.google.com/search/docs/appearance/ai-features</a></p>
+    <p>Google Search Central. (2026, September 8). <em>Organization (Organization) structured data</em>. Google for Developers. <a href="https://developers.google.com/search/docs/appearance/structured-data/organization">https://developers.google.com/search/docs/appearance/structured-data/organization</a></p>
+    <p>Schema.org. (n.d.). <em>sameAs</em>. Schema.org. Retrieved November 19, 2026, from <a href="https://schema.org/sameAs">https://schema.org/sameAs</a></p>
+    <p>Singhal, A. (2012, May 16). <em>Introducing the Knowledge Graph: things, not strings</em>. Google. <a href="https://blog.google/products/search/introducing-knowledge-graph-things-not/">https://blog.google/products/search/introducing-knowledge-graph-things-not/</a></p>
+
+    <div class="disclaimer">
+      This article is for general informational purposes and isn't a guarantee of placement or performance in any AI system. Google, ChatGPT, Perplexity, and similar tools are operated by third parties outside AnswerFoundry's control, and their behavior changes without notice. Results vary by business, market, and competition.
+    </div>
+
+    <p class="byline">Written by Kenny Chantasi, DO, founder of AnswerFoundry.</p>
+    <p class="reviewed">Last updated: November 19, 2026</p>
+
+    <p style="margin-top:28px;color:var(--slate)">If AI engines are mixing your business up with someone else's, or stating facts that are out of date, an AI visibility audit maps where the conflicting information lives and which fixes to make first.</p>
+  </div>
+</article>
+
+<section id="main" class="final">
+  <div class="wrap">
+    <h2>Find out what AI says about your business.</h2>
+    <p>The audit takes two weeks. The blind spot lasts as long as you let it.</p>
+    <a class="btn" href="/answer-snapshot/">Get Your Free Answer Snapshot</a>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap foot">
+    <div>
+      <strong style="color:#fff">AnswerFoundry LLC</strong><br>
+      2445 S Hiawassee Rd, PMB 1021<br>
+      Orlando, FL 32835<br>
+      <a href="mailto:hello@answerfoundry.ai">hello@answerfoundry.ai</a>
+    </div>
+    <div style="text-align:right">
+      &copy; 2026 AnswerFoundry LLC. All rights reserved.<br>
+      Serving Orlando &amp; Central Florida &middot; Remote across Florida<br>
+      <a href="/about/">About</a> &middot; <a href="/faq/">FAQ</a> &middot; <a href="/pricing/">Pricing</a> &middot; <a href="/sample-audit/">Sample Audit</a> &middot; <a href="/blog/">Blog</a> &middot; <a href="/contact/">Contact</a><br>
+      <span class="foot-legal"><a href="/terms/">Terms</a> &middot; <a href="/privacy/">Privacy</a> &middot; <a href="/cookie-policy/">Cookies</a> &middot; <a href="/ai-disclaimer/">AI Visibility Disclaimer</a> &middot; <a href="/accessibility/">Accessibility</a> &middot; <a href="/sms-terms/">SMS Terms</a> &middot; <a href="/legal/">All policies</a></span>
+    </div>
+  </div>
+</footer>
+
+<script type="application/ld+json">{"@context":"https://schema.org","@graph":[{"@type":"WebSite","@id":"https://answerfoundry.ai/#website","url":"https://answerfoundry.ai/","name":"AnswerFoundry","publisher":{"@id":"https://answerfoundry.ai/#org"}},{"@type":"ProfessionalService","@id":"https://answerfoundry.ai/#org","name":"AnswerFoundry LLC","url":"https://answerfoundry.ai/","telephone":"+1-321-321-9420","email":"hello@answerfoundry.ai","address":{"@type":"PostalAddress","streetAddress":"2445 S Hiawassee Rd PMB 1021","addressLocality":"Orlando","addressRegion":"FL","postalCode":"32835-6347","addressCountry":"US"},"areaServed":[{"@type":"City","name":"Orlando"},{"@type":"State","name":"Florida"}],"hasOfferCatalog":{"@type":"OfferCatalog","name":"AI Visibility Services","itemListElement":[{"@type":"Offer","itemOffered":{"@type":"Service","name":"AI Visibility Score","description":"A measured audit of how ChatGPT, Gemini, Perplexity, and Google AI Overviews describe and recommend your business versus competitors.","serviceType":"AI visibility audit"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Schema & Structure Repair","description":"Structured data (JSON-LD), entity consistency, and technical fixes so AI engines can parse, verify, and cite your business.","serviceType":"Structured data optimization"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Answer-Ready Content","description":"Content engineered to be quoted by answer engines: direct answers, FAQs, and citation-worthy pages.","serviceType":"Answer engine optimization content"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Local Signal Alignment","description":"Google Business Profile, reviews, and local directory alignment so AI assistants trust your local presence in Orlando and Central Florida.","serviceType":"Local SEO"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Monthly AI Monitoring","description":"Ongoing tracking of how AI engines describe, rank, and recommend your business, with plain-English monthly reports.","serviceType":"AI visibility monitoring"}},{"@type":"Offer","itemOffered":{"@type":"Service","name":"Owner's Roadmap","description":"A prioritized 90-day action plan translating audit findings into fixes ordered by impact.","serviceType":"Marketing strategy consulting"}}]}}]}</script><script src="https://widgets.leadconnectorhq.com/loader.js" data-resources-url="https://widgets.leadconnectorhq.com/chat-widget/loader.js" data-widget-id="6a75158f378a8b468f4fa163" data-source="WEB_USER"></script></body>
+</html>
