@@ -753,4 +753,10 @@ dateModified in each post's on-page JSON-LD. -->
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
+<url>
+<loc>https://answerfoundry.ai/blog/does-topical-authority-help-ai-search-visibility.html</loc>
+<lastmod>2026-11-27</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
 </urlset>
